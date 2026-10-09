@@ -1,0 +1,11 @@
+# The packages the pipeline imports, at the versions it was tested with.
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+pandas==3.0.5
+numpy==2.5.2
+openpyxl==3.1.5
+lxml==6.1.2
+pyecospold==4.0.1
+tkinterdnd2==0.6.2
+# code checks (optional): .venv\Scripts\python.exe -m pyflakes calculators meta_model spold pipeline
+pyflakes==4.0.3

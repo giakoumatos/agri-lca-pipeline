@@ -1,0 +1,58 @@
+{
+  "exchange placement:Mineral oil :: air / non-urban air or from high stacks||exchange is in a compartment the flow does not have||Mineral oil in air / non-urban air or from high stacks": {
+    "column": "exchange placement:Mineral oil :: air / non-urban air or from high stacks",
+    "first_seen": "ILCIDAF project full/clementine_production__organic__irrigated__fresh_grade__south.xlsx",
+    "found": "Mineral oil in air / non-urban air or from high stacks",
+    "kind": "exchange is in a compartment the flow does not have",
+    "value": "soil / agricultural",
+    "when": "2026-10-07T14:31:31"
+  },
+  "exchange:Carbon dioxide, biogenic||exchange name uses a qualifier ecoinvent does not have||Carbon dioxide, biogenic": {
+    "column": "exchange:Carbon dioxide, biogenic",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Carbon dioxide, biogenic",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Carbon dioxide, non-fossil",
+    "when": "2026-09-30T14:08:42"
+  },
+  "exchange:Carbon dioxide, land transformation||exchange name uses a qualifier ecoinvent does not have||Carbon dioxide, land transformation": {
+    "column": "exchange:Carbon dioxide, land transformation",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Carbon dioxide, land transformation",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Carbon dioxide, from soil or biomass stock",
+    "when": "2026-09-30T14:08:42"
+  },
+  "exchange:Methane, biogenic||exchange name uses a qualifier ecoinvent does not have||Methane, biogenic": {
+    "column": "exchange:Methane, biogenic",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Methane, biogenic",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Methane, non-fossil",
+    "when": "2026-09-30T14:08:42"
+  },
+  "exchange:Occupation, regionalised CF||exchange name uses a qualifier ecoinvent does not have||Occupation, regionalised CF": {
+    "column": "exchange:Occupation, regionalised CF",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Occupation, regionalised CF",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Occupation, annual crop",
+    "when": "2026-09-30T14:08:42"
+  },
+  "exchange:Water, CN: Nei Mongol||exchange name uses a qualifier ecoinvent does not have||Water, CN: Nei Mongol": {
+    "column": "exchange:Water, CN: Nei Mongol",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Water, CN: Nei Mongol",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Water, cooling, unspecified natural origin",
+    "when": "2026-09-30T14:08:42"
+  },
+  "exchange:Water, CN: Shaanxi||exchange name uses a qualifier ecoinvent does not have||Water, CN: Shaanxi": {
+    "column": "exchange:Water, CN: Shaanxi",
+    "first_seen": "cashmere/ecoinvent_data_provision_file_cashmere_farmed_AG.xlsx",
+    "found": "Water, CN: Shaanxi",
+    "kind": "exchange name uses a qualifier ecoinvent does not have",
+    "value": "Water, cooling, unspecified natural origin",
+    "when": "2026-09-30T14:08:42"
+  }
+}

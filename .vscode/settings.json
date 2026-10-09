@@ -1,0 +1,10 @@
+{
+  // Always the project venv, so Run/Debug and the terminal use the same
+  // interpreter -- pandas and tkinterdnd2 live here, not in system Python.
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+  // Python's compiled caches in one folder instead of a __pycache__ in each.
+  "terminal.integrated.env.windows": {
+    "PYTHONPYCACHEPREFIX": "${workspaceFolder}\\.venv\\pycache"
+  }
+}

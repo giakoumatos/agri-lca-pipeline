@@ -1,0 +1,174 @@
+// The pipeline (run_pipeline.py) runs the chain for new datasets: meta model,
+// the three models, the checklist checks and the review, verify.  Each part is
+// also its own program, run on its own below.
+//   0b. the re-check: the outputs as you corrected them (or the split
+//       Excels), checked again without recalculating
+//   1.  the three calculators, which BUILD the dataset workbooks
+//   1b. the SPOLD converter, run when a workbook is finished
+//   2.  the meta model: metadata, nomenclature and master-data checks
+//   3.  verify: is the output complete and current? (--fix repairs)
+//
+// The FIRST entry asks which program to run, every time you press Run, so
+// each one runs on its own and nothing depends on which file or panel has
+// focus.  (The "Run the file that is open" entry fails with "${file} can not
+// be resolved" when the focus is on a panel -- the terminal, the Claude panel
+// -- rather than on a file tab.)
+//
+// VS Code remembers the entry you last picked in the Run and Debug dropdown by
+// NAME and keeps using it for every Run -- that is how Run once kept starting
+// the meta model.  Leave the dropdown on the first entry; when a remembered
+// name disappears, VS Code falls back to it.  Keep it first if you reorder.
+{
+  "version": "0.2.0",
+  "inputs": [
+    {
+      "id": "whatToRun",
+      "type": "pickString",
+      "description": "What should run?",
+      "default": "run_pipeline.py",
+      "options": [
+        {"label": "Pipeline (meta model + 3 models + checks + review)",   "value": "run_pipeline.py"},
+        {"label": "Re-check (after correcting outputs or split Excels)",  "value": "recheck.py"},
+        {"label": "The three models (OLCApest + Multinutrient + Diesel)", "value": "pipeline/run_three_models.py"},
+        {"label": "The meta model (choose datasets, then review)",        "value": "meta_model/meta_model_new.py"},
+        {"label": "SPOLD converter",                                      "value": "spold/spold_converter_new.py"},
+        {"label": "Verify output",                                        "value": "pipeline/verify_output.py"}
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Choose what to run",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/${input:whatToRun}",
+      "env": {"PYTHONPYCACHEPREFIX": "${workspaceFolder}/.venv/pycache"},
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "The file in the active editor tab",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Always the pipeline (ignores the open file)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_pipeline.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Always the re-check (ignores the open file)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/recheck.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Always the three models (ignores the open file)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/pipeline/run_three_models.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Always the meta model (ignores the open file)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/meta_model_new.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "3. Verify output — is it complete and current?",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/pipeline/verify_output.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "args": [
+        "--details"
+      ]
+    },
+    {
+      "name": "Meta Model — propose, all projects (no UI)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/meta_model_new.py",
+      "args": [
+        "--no-ui"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Meta Model — commit approved corrections",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/meta_model_new.py",
+      "args": [
+        "--no-ui",
+        "--commit"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Meta Model — review window only",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/meta_model_ui.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Meta profile — induce for a project",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/build_meta_spec.py",
+      "args": [
+        "--project",
+        "ILCIDAF project full",
+        "--write"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Meta Model — chooser (pick datasets)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meta_model/meta_model_new.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "1b. SPOLD converter — write EcoSpold2 from the workbooks",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/spold/spold_converter_new.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    }
+  ]
+}

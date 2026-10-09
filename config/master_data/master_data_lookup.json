@@ -1,0 +1,519 @@
+{
+  "diesel used in application of plant protection product, by field sprayer": {
+    "intermediateExchangeId": "4987245d-420e-5940-88bd-13c14f82d29b",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in application of plant protection product, fumigation": {
+    "intermediateExchangeId": "7254541b-2206-54e7-b772-d1cd90642f7f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in chopping, maize": {
+    "intermediateExchangeId": "702d028f-d9e4-5d9e-91c1-718679a62442",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in combine harvesting": {
+    "intermediateExchangeId": "83ca0d01-940f-5e85-8580-3caf2ff202c9",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in combine harvesting, maize": {
+    "intermediateExchangeId": "b632dca0-4e9e-5d7a-9cbf-570bfafa2e36",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in combine harvesting, soybean": {
+    "intermediateExchangeId": "a68165dd-80c2-5020-a67e-973f607dfdc5",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in combine harvesting, sweet corn": {
+    "intermediateExchangeId": "2aafc2bb-b99f-5e97-bb71-971989067311",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in fertilising, by broadcaster": {
+    "intermediateExchangeId": "377231ec-13be-5598-94c1-ebc79bf1b86f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in fertilising, by injection": {
+    "intermediateExchangeId": "7226f39e-d24a-5d62-8924-3f7b1ac6abfd",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in fertilising, by rig fertiliser, sugarcane": {
+    "intermediateExchangeId": "e77ac6df-7915-5622-b96c-12e7b0ba318b",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in fertilising, by stool splitter, sugarcane": {
+    "intermediateExchangeId": "cd8669ee-1906-5a58-a6e1-a8714d9fb3fe",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in field leveling, sugarcane": {
+    "intermediateExchangeId": "2fd95c69-715e-5ddf-9c02-1e5ab7a34eed",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in furrow covering, for sugarcane": {
+    "intermediateExchangeId": "f9bef4a0-fac3-57df-856e-88a4b3c90f2c",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in furrow covering, sugarcane": {
+    "intermediateExchangeId": "5a6508f6-ec2f-56ae-8566-c05847808756",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in furrowing, sugarcane": {
+    "intermediateExchangeId": "09bd678e-f5f4-57f6-a4e0-7d250d0f57b5",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in harvesting, by complete harvester, beets": {
+    "intermediateExchangeId": "1f7b12fb-21b3-5369-98e4-75c061b94ba7",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in harvesting, by complete harvester, ground crops": {
+    "intermediateExchangeId": "e571b383-b49f-5372-97a7-4f8e7c7037db",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in harvesting, by potato harvester": {
+    "intermediateExchangeId": "968585ce-7f26-59aa-be22-77d9f9087100",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in harvesting, by sweet corn picker": {
+    "intermediateExchangeId": "f0b9a6ef-c7b6-546f-8b92-29b71ef64ea7",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in harvesting, sugarcane": {
+    "intermediateExchangeId": "9f10a00f-2bc4-5bf3-bfc1-9af20c21a6d2",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in haying, by rotary tedder": {
+    "intermediateExchangeId": "47505e1c-f57a-5c45-ab0e-8a043813f308",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in hoeing": {
+    "intermediateExchangeId": "9c2b8601-526c-5488-867e-73d69e0ee63d",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in limestone and gypsum application, by spreader": {
+    "intermediateExchangeId": "ae533461-a6ed-52c1-b977-2030afc55fd8",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in mowing, by rotary mower": {
+    "intermediateExchangeId": "da2da9dc-4ca0-5f19-87c8-cb193991785a",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in mowing, by rotary or sickle mower": {
+    "intermediateExchangeId": "8effab9b-9b4d-5374-8f36-63adeac45d72",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in mulching": {
+    "intermediateExchangeId": "07745265-51e9-57d6-a3f1-b693b3128597",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting": {
+    "intermediateExchangeId": "3668313e-ee9d-579d-bf08-dc29fbc1b1a2",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting with starter fertiliser or amendment, by drill": {
+    "intermediateExchangeId": "35ed5ce5-ae26-59bb-bea9-dee5a8f32479",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting with starter fertiliser or amendment, by no till planter": {
+    "intermediateExchangeId": "8f0b84e1-1b8f-5544-a52e-8656471ec2b5",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting with starter fertiliser or amendment, by row crop planter": {
+    "intermediateExchangeId": "9787e570-8585-53cc-bf35-f12ef6276918",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting with starter fertiliser or amendment, by subsoiler/v-ripper planter": {
+    "intermediateExchangeId": "691a77a7-6b6d-585a-8395-eb3513516321",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting with starter fertiliser, by no till planter": {
+    "intermediateExchangeId": "4fca07cb-4784-58b3-919e-9619da4b4aea",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, by drill": {
+    "intermediateExchangeId": "2d6c07e3-fe69-521d-87a0-a92d4da814d8",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, by no till drill": {
+    "intermediateExchangeId": "8046081b-84e5-5207-bbc0-d2a624d9e83d",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, by no till planter": {
+    "intermediateExchangeId": "3e881189-8f30-524c-8aa7-28715d0e30d8",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, by ridge planter": {
+    "intermediateExchangeId": "74cd09f4-7716-5dd2-abe3-0bd19b154112",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, by row crop planter": {
+    "intermediateExchangeId": "309f4932-ffbd-5ad4-9313-85bf629d735a",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, potato": {
+    "intermediateExchangeId": "0a4f0631-5cd0-5162-a1b6-656b3ade8fef",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in planting, sugarcane": {
+    "intermediateExchangeId": "1545c8c2-4bf9-5cbd-968f-2a95d974d148",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in potato haulm cutting": {
+    "intermediateExchangeId": "d8249717-885e-521d-b3a3-2e9e7e98070e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in potato planting": {
+    "intermediateExchangeId": "09a0f257-ffe5-5ae5-9279-8b353337cc5f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in sowing": {
+    "intermediateExchangeId": "00ff30ae-e5b7-5435-91e8-ea1fa13ed7fa",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in sugarcane loading, by loader": {
+    "intermediateExchangeId": "0564f55c-d113-55e4-b532-72a8307995a6",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in sugarcane transfer, by dump cart": {
+    "intermediateExchangeId": "f1e0d1c9-f1c6-5a0b-ba6d-1c3ce5947f39",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in sugarcane vinasse application, by wheel reel irrigation": {
+    "intermediateExchangeId": "71197298-c0a7-5959-9a1e-8503c63ba68a",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in sugarcane vinasse application, by wheel reel irrigation equipment": {
+    "intermediateExchangeId": "f2d088ef-b639-554c-a161-d8c4497c1f06",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in swath, by rotary windrower": {
+    "intermediateExchangeId": "7603b846-b5e8-523d-9cdc-38e3a20af19b",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, cultivating, by strip tiller": {
+    "intermediateExchangeId": "ee46bea3-1ad0-5f22-93f4-c8eacb88c8c2",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, cultivating, chiselling": {
+    "intermediateExchangeId": "ee475ac1-1876-5df6-ba97-8784968cfc94",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, currying, by weeder": {
+    "intermediateExchangeId": "f30a60e9-2a5b-5a26-991e-0c300b7c7893",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, disking": {
+    "intermediateExchangeId": "c8055f8b-6f11-5c65-8d40-cb735e1a8018",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, disking, with amendment": {
+    "intermediateExchangeId": "68d52472-5c93-5d4b-bdcb-107d48aff855",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, field cultivator": {
+    "intermediateExchangeId": "d842aa0c-1a63-569a-8884-39860ad1ee3e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, field cultivator with amendment": {
+    "intermediateExchangeId": "71d0635e-cf6b-5b91-8e0b-e7ffdb3795b2",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by moldboard plow": {
+    "intermediateExchangeId": "032a4b4f-4a43-5e05-ace8-6a640560f91d",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by offset disc harrow": {
+    "intermediateExchangeId": "7d21ed66-e4ac-5e2a-a55f-e33f564c4ab6",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by offset leveling disc harrow": {
+    "intermediateExchangeId": "b00be566-7799-572d-a989-283f32718bc0",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by rotary harrow": {
+    "intermediateExchangeId": "b473e2ec-fac5-56fd-b9fb-aac17af3406e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by spring tine harrow": {
+    "intermediateExchangeId": "fbd2a7ce-ab3c-57ef-945a-63579e61a71d",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, harrowing, by tandem disk": {
+    "intermediateExchangeId": "4a292c6a-d50b-5dbf-aa46-44bc0ca3cba2",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, hoeing and earthing-up, potatoes": {
+    "intermediateExchangeId": "7338855e-11b8-5c6d-b44a-3b369cea6e75",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, ploughing": {
+    "intermediateExchangeId": "54305ae3-a262-5f1a-86c7-3c5014d08c30",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, ridge cultivator": {
+    "intermediateExchangeId": "814e3c0a-6e5a-5b63-9254-efb377e0d86b",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, rolling": {
+    "intermediateExchangeId": "5b5e5000-ba51-55df-82d3-afb5232f9d4e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, rotary cultivator": {
+    "intermediateExchangeId": "973cde93-6500-587a-a381-fd4597195d0a",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, subsoiling, by subsoiler or v-ripper": {
+    "intermediateExchangeId": "e70099b6-2979-54cb-a992-e2372e18d411",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "diesel used in tillage, subsoiling, by subsoiler plow": {
+    "intermediateExchangeId": "4067b6ee-61c6-5d84-a427-d23fd53e86e8",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg",
+    "cpc": "33360: Gas oil"
+  },
+  "inorganic nitrogen fertiliser, as N": {
+    "intermediateExchangeId": "f5707bdf-f7e2-479b-b3ea-99c04de8a927",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from NPK (15-15-15) fertiliser": {
+    "intermediateExchangeId": "e5256148-1bf0-5ce8-9259-86a93e0d82ad",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from NPK (26-15-15) fertiliser": {
+    "intermediateExchangeId": "6ae358bc-d564-5598-ae31-babe2b3b143f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from ammonium nitrate phosphate": {
+    "intermediateExchangeId": "f9b06583-6d2d-5b01-a955-47d28cb91ffa",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from diammonium phosphate": {
+    "intermediateExchangeId": "24c55a2a-1107-5860-b37b-f83937548b12",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from monoammonium phosphate": {
+    "intermediateExchangeId": "f3645520-e2e6-500e-a233-9d2679b7a98f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from potassium nitrate": {
+    "intermediateExchangeId": "55cb6a15-e04d-5465-9548-6f388d905db7",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from potassium nitrate, agricultural grade": {
+    "intermediateExchangeId": "437d6b0b-e87f-5963-974b-de0a69449fa3",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from potassium nitrate, industrial grade": {
+    "intermediateExchangeId": "e0a50645-ba7d-5943-b2c2-7c5e06e1b88e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic nitrogen fertiliser, as N, from potassium nitrate, technical grade": {
+    "intermediateExchangeId": "e1bd5830-99ce-5acd-a414-b81966a41375",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5": {
+    "intermediateExchangeId": "5321a299-0c03-4bfc-9dda-d020456f6b2e",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5, from NPK (15-15-15) fertiliser": {
+    "intermediateExchangeId": "4d4cc900-2eeb-5bc0-905e-3dd8d145518f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5, from NPK (26-15-15) fertiliser": {
+    "intermediateExchangeId": "b1b4321a-4f38-50ae-8a5b-dfddcc4d884f",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5, from ammonium nitrate phosphate": {
+    "intermediateExchangeId": "0fa054f7-18ef-5f27-b1b1-b952c98f18f3",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5, from diammonium phosphate": {
+    "intermediateExchangeId": "27d6c788-367d-5c3f-9df2-fcd4085a70cf",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic phosphorus fertiliser, as P2O5, from monoammonium phosphate": {
+    "intermediateExchangeId": "f59fd9f9-8807-53f2-a362-f5c7354cf738",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O": {
+    "intermediateExchangeId": "7c4dafff-fe18-45c0-92e4-857950032abb",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from NPK (15-15-15) fertiliser": {
+    "intermediateExchangeId": "f984712b-d83e-5ff1-aab5-779541ccdc93",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from NPK (26-15-15) fertiliser": {
+    "intermediateExchangeId": "5d3d94b9-7455-5c75-bcd9-f3b8522c058d",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from potassium nitrate": {
+    "intermediateExchangeId": "dfe20da7-f940-5758-97e3-78fcbf138bc3",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from potassium nitrate, agricultural grade": {
+    "intermediateExchangeId": "7e4db74b-c491-5546-86c6-169e0b2378ad",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from potassium nitrate, industrial grade": {
+    "intermediateExchangeId": "d75eeb7d-2b75-5cd4-b44f-da944184bc18",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  },
+  "inorganic potassium fertiliser, as K2O, from potassium nitrate, technical grade": {
+    "intermediateExchangeId": "8474cec4-be76-5f04-8101-a55a56b02b99",
+    "unitId": "487df68b-4994-4027-8fdc-a4dc298257b7",
+    "unitName": "kg"
+  }
+}

@@ -1,0 +1,18 @@
+# The Python environment and its compiled caches (rebuilt from requirements)
+.venv/
+__pycache__/
+*.pyc
+
+# Data providers' datasets and everything the pipeline produces from them
+input datasets/
+output/
+* - activity list.xlsx
+
+# Regenerated automatically when the OLCA-Pest tool changes
+*_olcapest_cache.pkl
+
+# Excel's lock file of a workbook that is open
+~$*
+
+# Local tool settings
+.claude/

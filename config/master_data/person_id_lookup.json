@@ -1,0 +1,2312 @@
+{
+  "AISBL": {
+    "companyName": "The European Pulp Industry Sector Association AISBL",
+    "email": "https://epis.org/home",
+    "personId": "cd373f89-264e-4fe3-85c4-d0c38970ada6"
+  },
+  "Abhinandan Nabera": {
+    "companyName": "-",
+    "email": "abhinandan.nabera@chem.ethz.ch",
+    "personId": "cfe8e709-6bdf-4ba3-8f65-867a29ef3d5d"
+  },
+  "Achille Laurent": {
+    "companyName": "ecoinvent Centre",
+    "email": "laurent@ecoinvent.org",
+    "personId": "f7bfc861-bd79-4b8d-8d7c-7f86ebd1d809"
+  },
+  "Achille-B. Laurent": {
+    "companyName": "CEGEP de St Felicien",
+    "email": "achille-benjamin.laurent.1@ulaval.ca",
+    "personId": "339e3f45-2694-46aa-a14d-23e9923d7b3f"
+  },
+  "Adam Auer": {
+    "companyName": "Cement Association of Canada",
+    "email": "aauer@cement.ca",
+    "personId": "b110532f-5ea5-468f-8c2a-f60b7654ef3b"
+  },
+  "Alba Canovas": {
+    "companyName": "Universitat Polit\u00e8cnica de Catalunya",
+    "email": "alba.canovas@estudiant.upc.edu",
+    "personId": "547e34ec-4633-4302-8394-cbc2f234764c"
+  },
+  "Alba Canovas Creus": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "alba.canovas@empa.ch",
+    "personId": "0223069a-b3cb-475c-84a2-2e0a9eaaeb07"
+  },
+  "Albert Zimmermann": {
+    "companyName": "NOENTRY",
+    "email": "art@ecoinvent.org",
+    "personId": "e7eaa5da-0428-4d05-879a-e3fc3966d789"
+  },
+  "Alejandro P Arena": {
+    "companyName": "CONICET",
+    "email": "aparena@frm.utn.edu.ar",
+    "personId": "8f9a9cdd-ca2f-4422-b79c-9819cdd7a0c4"
+  },
+  "Aleksandra Treichel": {
+    "companyName": "ecoinvent Centre",
+    "email": "treichel@ecoinvent.org",
+    "personId": "ffdcb71b-b795-461f-a2b7-26c485ec4bda"
+  },
+  "Alex Primas": {
+    "companyName": "Basler und Hofmann",
+    "email": "alex.primas@bhz.ch",
+    "personId": "75d9b93b-fe90-47c2-b337-aa8848c78bdb"
+  },
+  "Alexander Passer": {
+    "companyName": "Techn.Universit\u00e4t Graz",
+    "email": "Alexander.Passer@TUGraz.at",
+    "personId": "2cc38f7c-1bb8-45f1-baeb-d47e6decff75"
+  },
+  "Alexander R\u00f6der": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "e9ca7fbe-dea5-4107-a7f1-1a5ed10b961e"
+  },
+  "Alexander van der Flier": {
+    "companyName": "Ernst & Young Accountants LLP",
+    "email": "alexander.van.der.flier@nl.ey.com",
+    "personId": "e2407dbe-a6f7-4dc9-a73d-adbb821a7873"
+  },
+  "Alexis Lozano Medina": {
+    "companyName": "Universidad de Las Palmas de Gran Canaria",
+    "email": "alexis.lozano@ulpgc.es",
+    "personId": "65af3b98-d01b-45e0-b1a3-09cd28d0331b"
+  },
+  "Alfredo Pro Castaneyra": {
+    "companyName": "SUDESCO ENERGY",
+    "email": "www.sudesco.com",
+    "personId": "ee92e2fb-2f18-4c07-b68c-d655c0d84ce7"
+  },
+  "Amir Safaei": {
+    "companyName": "ecoinvent Centre",
+    "email": "safaei@ecoinvent.org",
+    "personId": "c0c866ac-ead0-4351-a0ea-6ff79da56c74"
+  },
+  "Amit Kapur": {
+    "companyName": "RMIT University",
+    "email": "amitkapur@hotmail.com",
+    "personId": "9270a112-07cb-455b-b0c9-ab7e11d57b54"
+  },
+  "Amon": {
+    "companyName": "NOENTRY",
+    "email": "francine.amon@sp.se",
+    "personId": "a3b96a53-954b-4c46-bb2b-1f7a0c048bdb"
+  },
+  "Amor Ben": {
+    "companyName": "University of Sherbrooke",
+    "email": "ben.amor@usherbrooke.ca",
+    "personId": "8ea68137-bcc8-4abe-a0b5-d4109fcba561"
+  },
+  "Ana Cl\u00e1udia Dias": {
+    "companyName": "University of Aveiro",
+    "email": "acdias@ua.pt",
+    "personId": "8718a9ce-8692-4776-aec4-71733dc21805"
+  },
+  "Ana Donke": {
+    "companyName": "Universidade de S\u00e3o Paulo",
+    "email": "ana.donke@usp.br",
+    "personId": "42f20e28-d592-4bad-8c24-a2580048dacc"
+  },
+  "Ana Passuello": {
+    "companyName": "Universidade Federal do Rio Grande do Sul",
+    "email": "anapaula.k@ufrgs.br",
+    "personId": "61cb2b57-0a48-4ec8-9bfe-5f5d28a8fa9f"
+  },
+  "Andrea Del Duce": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "andrea.delduce@quantis-intl.com",
+    "personId": "df294a6d-3fed-4c6e-8482-bf45ea65c9d0"
+  },
+  "Andreas Giakoumatos": {
+    "companyName": "ecoinvent Centre",
+    "email": "giakoumatos@ecoinvent.org",
+    "personId": "73b894af-e718-44dd-a336-7059605a2a9b"
+  },
+  "Andreas Schiffleitner": {
+    "companyName": "KERP Research GmbH",
+    "email": "andreas.schiffleitner@kerp.at",
+    "personId": "2efbdcfe-b456-4557-a210-927ee6742f7b"
+  },
+  "Andrew Simons": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "d94fc0f8-968e-4190-9583-0f73a91b1a28"
+  },
+  "Andrii Gritsevskyi": {
+    "companyName": "International Atomic Energy Agency",
+    "email": "a.gritsevskyi@iaea.org",
+    "personId": "6ba83b26-25ab-4984-90ad-cafd9a873db0"
+  },
+  "Andr\u00e9 Dominghetti": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "andre.dominghetti@embrapa.br",
+    "personId": "00d48340-e977-4c22-8d1a-5a3c61f42896"
+  },
+  "Andr\u00e9 May": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "andre.may@embrapa.br",
+    "personId": "ad44b929-40f0-44f5-bfaf-31a1d15e9ae2"
+  },
+  "Andy Whiting": {
+    "companyName": "ERM",
+    "email": "andy.whiting@erm.com",
+    "personId": "f3b75377-2c49-4482-bbc2-ee1b22627396"
+  },
+  "Anette K\u00f6hler (obsolete)": {
+    "companyName": "NOENTRY",
+    "email": "eth.esd@ecoinvent.org",
+    "personId": "d3586b9d-cb02-4270-9b3a-94694bc592fe"
+  },
+  "Angel Avad\u00ed": {
+    "companyName": "Centre de coop\u00e9ration Internationale en Recherche Agronomique pour le D\u00e9veloppement",
+    "email": "angel.avadi@cirad.fr",
+    "personId": "b623d26a-e58f-465d-bf6e-a42a6fc72ae8"
+  },
+  "Angelika Heil": {
+    "companyName": "NOENTRY",
+    "email": "art@ecoinvent.org",
+    "personId": "c64d4a37-9bb9-4617-8cd7-a130958fd5c6"
+  },
+  "Angeline de Beaufort": {
+    "companyName": "De Beaufort-Langeveld",
+    "email": "beaulang@planet.nl",
+    "personId": "642d2979-ab88-423b-a8d5-92a476ff4b7e"
+  },
+  "Anna Kounina": {
+    "companyName": "Quantis",
+    "email": "anna.kounina@quantis-intl.com",
+    "personId": "15110723-1926-5f8c-8a60-8f9e0a724cac"
+  },
+  "Anna Leticia M. T. Pighinelli": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "anna.pighinelli@embrapa.br",
+    "personId": "be20d5a6-f2e0-4ed9-ae48-8d375e0b654d"
+  },
+  "Anne Greig": {
+    "companyName": "Four Elements Consulting, LLC",
+    "email": "anne@fourelementsllc.com",
+    "personId": "2128bcc1-8b20-4aa3-9c2f-21d14ff8ce3d"
+  },
+  "Anne Perwuelz": {
+    "companyName": "Ecole Nationale Sup\u00e9rieure des Arts et Indutries Textiles",
+    "email": "anne.perwuelz@ensait.fr",
+    "personId": "7f5f9cad-1f78-481b-b3c2-62af1b55ac44"
+  },
+  "Annelore Kleijer": {
+    "companyName": "NOENTRY",
+    "email": "annelore.kleijer@heig-vd.ch",
+    "personId": "1b9c6401-ddeb-4ce8-9c57-21664fbc3e90"
+  },
+  "Annette K\u00f6hler": {
+    "companyName": "PE International",
+    "email": "a.koehler@pe-international.com",
+    "personId": "f71dbb1a-b0e0-4c18-95b6-00d07492b33f"
+  },
+  "Antonella Polimeno": {
+    "companyName": "ecoinvent Centre",
+    "email": "polimeno@ecoinvent.org",
+    "personId": "a71df3a2-6775-4a7f-8cfc-82e422c7da1c"
+  },
+  "Antonia Rahn": {
+    "companyName": "German Aerospace Centre",
+    "email": "Antonia.Rahn@dlr.de",
+    "personId": "b33f7803-f106-5601-a530-6bc1d3ec468c"
+  },
+  "Antonio C.I. Pizzigallo": {
+    "companyName": "Universit\u00e0 degli Studi di Siena",
+    "email": "pizzigallo@unisi.it",
+    "personId": "2416d4b6-cdf2-4d8e-ab65-6527b06d319a"
+  },
+  "Antonio Valente": {
+    "companyName": "ecoinvent Centre",
+    "email": "valente@ecoinvent.org",
+    "personId": "ef4deaf6-886a-4e46-800d-fb5fac80c2e8"
+  },
+  "Archana Datta": {
+    "companyName": "Federation of Indian Chambers of Commerce and Industry ",
+    "email": "archana.datta@ficci.com",
+    "personId": "61ec0829-9bd6-4288-8866-2cf16ff44ca2"
+  },
+  "Arnaud Dauriat": {
+    "companyName": "ENERS Energy Concept",
+    "email": "arnaud.dauriat@eners.ch",
+    "personId": "940b1299-bacb-490a-9f79-5690fea8c223"
+  },
+  "Arthur Braunschweig": {
+    "companyName": "E2 Management Consulting AG",
+    "email": "abraunschweig@e2mc.com",
+    "personId": "b77154e9-578d-458d-b577-bf75ae26696f"
+  },
+  "Asher Kiperstok": {
+    "companyName": "Federal University of Bahia",
+    "email": "asher@ufba.br",
+    "personId": "1e846792-317a-499e-bb40-6dbcc4966fe0"
+  },
+  "Assumpci\u00f3 ANTON": {
+    "companyName": "Institut de Reserca i Technologica Agroalimentaries",
+    "email": "aantonvallejo@hotmail.com",
+    "personId": "63eace01-5789-4faa-b4a7-30ee7bab41b3"
+  },
+  "Aur\u00e9lie Wilfart": {
+    "companyName": "INRA",
+    "email": "Aurelie.Wilfart@rennes.inra.fr",
+    "personId": "2f75b50e-66d1-4869-9423-a2ec934570be"
+  },
+  "Avraam Symeonidis": {
+    "companyName": "ecoinvent Centre",
+    "email": "Symeonidis@ecoinvent.org",
+    "personId": "847a56f5-d9e5-4a65-ab51-b056e0039130"
+  },
+  "Axel Liebich": {
+    "companyName": "IFEU GmbH",
+    "email": "axel.liebich@ifeu.de",
+    "personId": "cbe02a0d-9502-44f6-a266-a83100ce794e"
+  },
+  "Bastian Burger": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "88a883c4-ad96-4494-b1bc-64ff567e31db"
+  },
+  "Beatriz Gonz\u00e1lez Dom\u00ednguez": {
+    "companyName": "ecoinvent Centre",
+    "email": "intern@ecoinvent.org",
+    "personId": "924da437-1f6d-488d-8690-b738f9b97cd7"
+  },
+  "Bernhard Steubing": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "steubing.bernhard@gmail.com",
+    "personId": "3901f510-8e3e-42da-b812-eed99f6aa894"
+  },
+  "Biao Luo": {
+    "companyName": "Alibaba Cloud",
+    "email": "biao00luo@gmail.com",
+    "personId": "14680c1f-e07e-48dd-952d-91dff166d724"
+  },
+  "Bo Weidema": {
+    "companyName": "ecoinvent Centre",
+    "email": "bo@ilca.es",
+    "personId": "597e66fe-84dd-42a9-91e5-686e48a81061"
+  },
+  "Botha": {
+    "companyName": "-",
+    "email": "eebotha4@gmail.com",
+    "personId": "f66192a7-af16-4abf-b83a-071c0a2c1a9a"
+  },
+  "Bruno Peuportier": {
+    "companyName": "Mines ParisTech",
+    "email": "bruno.peuportier@mines-paristech.fr",
+    "personId": "1e0b7429-0c70-47c2-9bf1-d797cfa423ca"
+  },
+  "B\u00e1rbara Civit": {
+    "companyName": "-",
+    "email": "bcivit@mendoza-conicet.gob.ar",
+    "personId": "44b3c31e-fbbd-4acf-be05-4ac5c8a3d82f"
+  },
+  "Carine Grossrieder": {
+    "companyName": "Norwegian University of Science and Technology",
+    "email": "carine.grossrieder@ntnu.no",
+    "personId": "59b8233f-9241-4154-b55f-b9e818857d3d"
+  },
+  "Carl Vadenbo": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "vadenbo@ifu.baug.ethz.ch",
+    "personId": "9a963412-20a7-428b-8740-3582e217c4b6"
+  },
+  "Carles Martinez": {
+    "companyName": "In\u00e8dit Innovation S.L.",
+    "email": "carles@ineditinnova.com",
+    "personId": "a9ca9708-7fc4-4ec9-9e24-6d5671ef1a7f"
+  },
+  "Carol-lynne Pettit": {
+    "companyName": "Cobalt Institute",
+    "email": "Sustainability@cobaltinstitute.org",
+    "personId": "b2933557-def7-4eca-ad1f-f7b3a97b7d4c"
+  },
+  "Caroline Gaudreault": {
+    "companyName": "National Council for Air & Stream Improvement",
+    "email": "Caroline.Gaudreault@anthesisgroup.com",
+    "personId": "253759c9-c631-44cc-b293-955a2f6d4cba"
+  },
+  "Caroline Wildbolz": {
+    "companyName": "Stiftung myclimate - The Climate Protection Partnership",
+    "email": "caroline.wildbolz@myclimate.org",
+    "personId": "81f775a2-be91-48fa-bdff-d0435178a472"
+  },
+  "Catherine Reid": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "catherine-2.reid@polymtl.ca",
+    "personId": "157cf758-899d-48c3-9cec-96082aa3c658"
+  },
+  "Cecile Guignard": {
+    "companyName": "Quantis",
+    "email": "cecile.guignard@quantis-intl.com",
+    "personId": "e36cf256-faeb-47ab-89e8-998e46b849b7"
+  },
+  "Cecille Cassar": {
+    "companyName": "ecoinvent Centre",
+    "email": "cassar@ecoinvent.org",
+    "personId": "2c0a086e-8426-42f6-89c6-a6ad8763fe53"
+  },
+  "Charles Thibodeau": {
+    "companyName": "CT Consultant",
+    "email": "charles@ctconsultant.ca",
+    "personId": "21166c31-3207-435f-99a1-a67f9b9aa346"
+  },
+  "Charlotte Petiot": {
+    "companyName": "Bio Intelligence Service",
+    "email": "charlotte.petiot@biois.com",
+    "personId": "8d3d328e-d82f-4246-ab1d-6dd28b3f46c8"
+  },
+  "Cheikh": {
+    "companyName": "Centre Technique de la Plasturgie et du Composite",
+    "email": "youcef.cheikh@ct-ipc.com",
+    "personId": "f21c4394-8b14-4264-be90-5c0c9435082d"
+  },
+  "Chris Goemans": {
+    "companyName": "Athena Sustainable Materials Institute",
+    "email": "chris.goemans@athenasmi.org",
+    "personId": "b4ec49df-e656-49e0-aa03-b672213f0cf6"
+  },
+  "Chris Mutel": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "cmutel@gmail.com",
+    "personId": "330df524-e5a6-46a1-8d92-2e14415a04f6"
+  },
+  "Christian Bauer": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "5ccabe2c-aa6b-4c10-9cd7-77074bee0c03"
+  },
+  "Christian Capello": {
+    "companyName": "NOENTRY",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "bb0b715c-3173-41e5-8e93-c5f1d70fc493"
+  },
+  "Christine Chen": {
+    "companyName": "IERS, LLC",
+    "email": "chschen@iersweb.com",
+    "personId": "a38da037-17c4-4985-9e76-92561b53feb0"
+  },
+  "Christoffer Krewer": {
+    "companyName": "SIK - Swedish Institute for Food and Biotechnology",
+    "email": "christoffer.krewer@sp.se",
+    "personId": "1d58d247-a8f0-494d-a863-55cf46fbd449"
+  },
+  "Christoph Meili": {
+    "companyName": "ESU-services Ltd.",
+    "email": "meili@esu-services.ch",
+    "personId": "b091226d-5fc8-4c8d-8d2b-3f938d63d377"
+  },
+  "Christopher Oberschelp": {
+    "companyName": "Ecological Systems Design, ETH Z\u00fcrich (obsolete)",
+    "email": "oberschelp@ifu.baug.ethz.ch",
+    "personId": "f7495ea8-83b8-4047-9da0-e9803f7e6425"
+  },
+  "Cirilo": {
+    "companyName": "Funda\u00e7\u00e3o Espa\u00e7o Eco",
+    "email": "fabio.cirilo@basf.com",
+    "personId": "28a981b7-f331-4ae8-b76b-1f20e68ee737"
+  },
+  "Claudia Cristina Moore": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "ccristina569@alumni.usp.br",
+    "personId": "c83af9f3-7a22-40be-8a5d-3c50c50dfc15"
+  },
+  "Claudia Pe\u00f1a": {
+    "companyName": "Addere Investigaci\u00f3n y Tecnolog\u00eda.",
+    "email": "cpena@addere.cl",
+    "personId": "0fe9b0e3-fb0c-4ebb-82da-a80b90537fbf"
+  },
+  "Claudine Basset-Mens": {
+    "companyName": "Centre de coop\u00e9ration Internationale en Recherche Agronomique pour le D\u00e9veloppement",
+    "email": "claudine.basset-mens@cirad.fr",
+    "personId": "00a8a76b-3d74-4cba-bc5f-b07ec201d4b5"
+  },
+  "Cornelia Stettler": {
+    "companyName": "Carbotech AG",
+    "email": "c.stettler@carbotech.ch",
+    "personId": "1b10cab2-2384-45ca-93e8-db47450e3394"
+  },
+  "Cristian Emhart": {
+    "companyName": "Fundaci\u00f3n Chile",
+    "email": "cristian.emhart@fch.cl",
+    "personId": "ad744c36-f552-4b78-b856-8a30ff944b7f"
+  },
+  "C\u00e1ssia Maria Lie Ugaya": {
+    "companyName": "Universidade Tecnol\u00f3gica Federal do Paran\u00e1",
+    "email": "cassiaugaya@utfpr.edu.br",
+    "personId": "d9cf7a3a-8807-41af-b749-853b12261458"
+  },
+  "Damien Giurco": {
+    "companyName": "University of Technology Sydney",
+    "email": "damien.giurco@uts.edu.au",
+    "personId": "a787c9ff-7ff8-4c7e-ab4a-e6699fd487e3"
+  },
+  "Daniel Kellenberger": {
+    "companyName": "Intep Integrale\u00a0Planung\u00a0GmbH",
+    "email": "kellenberger@intep.com",
+    "personId": "be8b74a4-163f-432f-8650-1d50928177d8"
+  },
+  "Daniel Kellenberger (obsolete)": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "91fa149b-ae69-4eb6-b8cd-43f4e560246a"
+  },
+  "Daniela Baumann": {
+    "companyName": "ecoinvent Centre",
+    "email": "baumann@ecoinvent.org",
+    "personId": "72a10851-23f2-4e29-809f-ef6d51c232bc"
+  },
+  "Daria Dellenbach": {
+    "companyName": "ecoinvent Centre",
+    "email": "dellenbach@ecoinvent.org",
+    "personId": "619b8e73-f3d9-4e82-9768-cb3968406cc2"
+  },
+  "David  Turner": {
+    "companyName": "ecoinvent Centre",
+    "email": "turner@ecoinvent.org",
+    "personId": "f1866843-f887-4dd2-a2a6-33919fb7f5a7"
+  },
+  "David Cornell": {
+    "companyName": "Association of Postconsumer Plastic Recyclers",
+    "email": "dcornell@usit.net",
+    "personId": "7c85babd-8225-40c6-9b1c-140550ace17b"
+  },
+  "David FitzGerald": {
+    "companyName": "ecoinvent Centre",
+    "email": "fitzgerald@ecoinvent.org",
+    "personId": "44a0bdd8-6624-4a73-a661-7190ddf070b3"
+  },
+  "David Nerjes": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "d.nerjes@ifu.com",
+    "personId": "727fb9f1-2fcc-4ab4-b82e-1ae10170c792"
+  },
+  "David Porras": {
+    "companyName": "Centre de la Propietat Forestal de Catalunya ",
+    "email": "david.porras@gencat.cat",
+    "personId": "a0c29817-13fa-4a48-a605-db1af635fbfe"
+  },
+  "David Turner": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "david.turner@empa.ch",
+    "personId": "64faadb9-5be6-45f5-a9fb-54d3d39b86a3"
+  },
+  "Davoud Heidari": {
+    "companyName": "National Research Council Canada (NRC) ",
+    "email": "davoud.heidari@nrc-cnrc.gc.ca",
+    "personId": "c4a94012-f54b-4559-8dd8-57e8d7caf058"
+  },
+  "Default Database Administrator User": {
+    "companyName": "2B Consulenza Ambientale",
+    "email": "ecoinvent.workflow@ifu-hh.de",
+    "personId": "4b6edbc8-1970-47e8-9cc1-39311a223fa3"
+  },
+  "Dhanesh Chandra": {
+    "companyName": "FICCI Quality Forum",
+    "email": "ilcm@ficci.com",
+    "personId": "cf8304ae-442a-4544-988a-cc1a68683b6c"
+  },
+  "Dimitra Ioannidou": {
+    "companyName": "ecoinvent Centre",
+    "email": "ioannidou@ecoinvent.org",
+    "personId": "e87545d8-72aa-41a5-86f1-aef72d2acd2b"
+  },
+  "Diogo Silva": {
+    "companyName": "Universidade de S\u00e3o Paulo",
+    "email": "diogo.apls@gmail.com",
+    "personId": "1f74459d-88b7-4842-9492-16700a6f0d46"
+  },
+  "Djibril RENE": {
+    "companyName": "European Aluminium Association",
+    "email": "rene@eaa.be",
+    "personId": "ecf24deb-3740-42ed-8254-7de6868736e9"
+  },
+  "Djibril Ren\u00e9": {
+    "companyName": "European Aluminium Association",
+    "email": "rene@eaa.be",
+    "personId": "461cfa8e-6a35-4f4b-9474-ff7880b93300"
+  },
+  "Dominic Notter": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.ch",
+    "personId": "41f6c41a-42b0-4ecd-808d-0600bcfadb14"
+  },
+  "Dominik Saner": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "dominik.saner@ifu.baug.ethz.ch",
+    "personId": "000f2ba7-53bc-4ad8-aba2-d41b0adadac6"
+  },
+  "Dominique Maxime": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "dominique.maxime@polymtl.ca",
+    "personId": "f0d8b853-e040-4d03-a6fd-ad279d931721"
+  },
+  "Dunja Dux": {
+    "companyName": "NOENTRY",
+    "email": "art@ecoinvent.org",
+    "personId": "a837722c-b672-48a8-b628-6ca67e086298"
+  },
+  "EUROPUR": {
+    "companyName": "EUROPUR",
+    "email": "info@europur.org",
+    "personId": "8a78714e-cdff-42f2-8306-d93f3d3d0fec"
+  },
+  "Edgard  Gnansounou": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "edgard.gnansounou@epfl.ch",
+    "personId": "de36d234-5cf7-4580-955f-41cd03a402f4"
+  },
+  "Edivan Cherubini": {
+    "companyName": "EnCiclo Solu\u00e7\u00f5es Sustent\u00e1veis",
+    "email": "edivan.cherubini@posgrad.ufsc.br",
+    "personId": "22904cda-1af1-46b7-a5c9-a871d6d0976f"
+  },
+  "Eduardo Sugawara": {
+    "companyName": "Funda\u00e7\u00e3o Espa\u00e7o Eco",
+    "email": "eduardo.toshio@basf.com",
+    "personId": "0d906c8f-85ae-44f5-b4ed-570e06a5c4d7"
+  },
+  "Eduardo Toshio Sugawara": {
+    "companyName": "Funda\u00e7\u00e3o Espa\u00e7o Eco",
+    "email": "eduardo.toshio@basf.com",
+    "personId": "9013addf-28b9-4afa-996a-4ab3dda2f3a7"
+  },
+  "Edwin  Zea Escamilla": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "zea@ibi.baug.ethz.ch",
+    "personId": "2e635ac3-1634-43b9-814b-6aa753d87fac"
+  },
+  "Edwin Rua": {
+    "companyName": "CPT-Thermal Spray Center-, Universitat\u00a0de Barcelona, Spain",
+    "email": "info@cptub.eu",
+    "personId": "cd88fc51-6ba7-4d23-8d7d-e67197a55d4a"
+  },
+  "Edwin Zea": {
+    "companyName": "University of Z\u00fcrich",
+    "email": "edwin.zea@ccrs.uzh.ch",
+    "personId": "64904c3d-b851-4e05-ba0f-c5281e595575"
+  },
+  "Edwin Zea Escamilla": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "edwin.zea@ccrs.uzh.ch",
+    "personId": "4440e87f-28d3-49a2-8f7b-bd01155193fb"
+  },
+  "Efstathios Kakkos": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "efstathios.kakkos@empa.ch",
+    "personId": "4b330f16-cd57-5a41-bae6-fd16b14a2289"
+  },
+  "Eleonora Crenna": {
+    "companyName": "-",
+    "email": "eleonora.crenna@empa.ch",
+    "personId": "3bf6c387-de67-4435-a12a-63ca94e7a0bf"
+  },
+  "Eliane Riedener": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "eliane.riedener@agroscope.admin.ch",
+    "personId": "fffe1db8-a402-4881-bfa2-c2b85ddef3a5"
+  },
+  "Elina Anagnostou": {
+    "companyName": "ecoinvent Centre",
+    "email": "anagnostou@ecoinvent.org",
+    "personId": "5a018b81-43a3-49b7-aaf7-31cdc742bc54"
+  },
+  "Emilia Moreno Ruiz": {
+    "companyName": "ecoinvent Centre",
+    "email": "moreno@ecoinvent.org",
+    "personId": "35d091e9-38c2-4037-9efe-a73673c57123"
+  },
+  "Emiliano Micalizio": {
+    "companyName": "Ramboll",
+    "email": "emicalizio@ramboll.com",
+    "personId": "41de1383-7878-41a2-9057-d2bcf7a3593d"
+  },
+  "Enkeled Hoxha": {
+    "companyName": "ecoinvent Centre",
+    "email": "hoxha@ecoinvent.org",
+    "personId": "3dd7e281-3e09-462d-8f12-45c65c37a0d3"
+  },
+  "Enrico Benetto": {
+    "companyName": "Centre de Ressources des Technologies pour l'Environnement, CRP Henri Tudor",
+    "email": "enrico.benetto@list.lu",
+    "personId": "3323767e-fc23-40bd-9d80-d9ee04a6fb35"
+  },
+  "Enrico Bonanno": {
+    "companyName": "ecoinvent Centre",
+    "email": "bonanno@ecoinvent.org",
+    "personId": "6d47f767-db16-44f6-88f7-613b22f46009"
+  },
+  "Enzi Claudia": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "claudia.enzi@psi.ch",
+    "personId": "76d64cef-c356-4a6c-b5ce-bd5ac0fa4fb1"
+  },
+  "Eric Johnson": {
+    "companyName": "Atlantic Consulting",
+    "email": "ejohnson@ecosite.co.uk",
+    "personId": "daa0c503-6952-4702-a3c0-b475e34ad15f"
+  },
+  "Eric Van Genderen": {
+    "companyName": "International Zinc Association",
+    "email": "evangenderen@zinc.org",
+    "personId": "075d2881-e603-4a3c-8a27-741e709e7a43"
+  },
+  "Erik Alsema": {
+    "companyName": "Utrecht University",
+    "email": "e.a.alsema@chem.uu.nl",
+    "personId": "5f688ebe-099a-44f7-98e7-c32b526b31fa"
+  },
+  "Esther Sanye Mengual": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "Ester.Sanye@empa.ch",
+    "personId": "5a5966c4-0f38-44b7-8dee-982677578260"
+  },
+  "Etienne LEES-PERASSO": {
+    "companyName": "Bureau Veritas CODDE",
+    "email": "etienne.lees-perasso@fr.bureauveritas.com",
+    "personId": "e2d6e90a-4ffa-41d1-b2b5-65d68bd67955"
+  },
+  "Ettore Settanni": {
+    "companyName": "University of Bari",
+    "email": "ettoresettanni@hotmail.com",
+    "personId": "54d72f10-4731-483e-b175-550700c41302"
+  },
+  "Eylem Kilic": {
+    "companyName": "Usak University",
+    "email": "eylemkilic@gmail.com",
+    "personId": "9eb39d77-e323-44b0-a04a-8eaf132b7c04"
+  },
+  "F. Habermacher": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "fabienne.habermacher@empa.ch",
+    "personId": "cde2ac11-5e4c-4144-aa74-572a7cbb0845"
+  },
+  "F. Valebona; T. B. Rocha; F. L. Motta": {
+    "companyName": "ACV Brasil",
+    "email": "acvbrasil@acvbrasil.com.br",
+    "personId": "744c1b14-4dc1-4304-92e5-aaeb334bc798"
+  },
+  "Fabienne Habermacher": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "fabienne@empa",
+    "personId": "210ee764-ea57-478e-a0f7-9dab5bb4f767"
+  },
+  "Fabio Valebona": {
+    "companyName": "-",
+    "email": "fabio.valebona@acvbrasil.com.br",
+    "personId": "89880d7e-5882-4062-99b2-174cb9d1d7be"
+  },
+  "Fanny Lebailly": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "fanny.lebailly@polymtl.ca",
+    "personId": "3d4f5456-7aa5-4158-9b55-837a02a6857a"
+  },
+  "Fausto Freire": {
+    "companyName": "Technical University of Lisbon",
+    "email": "fausto.freire@dem.uc.pt",
+    "personId": "4eeae778-a869-4ad7-bb69-2472212513f1"
+  },
+  "Felipe Motta": {
+    "companyName": "ACV Brasil",
+    "email": "felipe@acvbrasil.com.br",
+    "personId": "5ff5136a-c40c-4441-8e26-89615447c895"
+  },
+  "Fernanda Belizario Silva": {
+    "companyName": "Institute for Technological Research",
+    "email": "fbsilva@ipt.br",
+    "personId": "1db3a71d-dcf4-4266-9721-025ec9783105"
+  },
+  "Fernando Dias": {
+    "companyName": "Embrapa Pantanal",
+    "email": "fernando.dias@embrapa.br",
+    "personId": "c69691d9-f8ab-40f4-a00e-72e5024c924d"
+  },
+  "Fernando H. Cardoso": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "cardosof@usp.br",
+    "personId": "a244c7a1-77ea-4d7d-be7f-3d4336e7da9d"
+  },
+  "Filippo Sessa": {
+    "companyName": "Life Cycle Engineering",
+    "email": "sessa@studiolce.it",
+    "personId": "bba830ea-698b-4ee2-9e36-a2ecf6eafd6f"
+  },
+  "Florentine Brunner": {
+    "companyName": "ecoinvent Centre",
+    "email": "Brunner@ecoinvent.org",
+    "personId": "ab2a5a32-7e0d-431a-9f6c-9011ff140de7"
+  },
+  "Florian Gsch\u00f6sser": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "gschoesser@ibi.baug.ethz.ch",
+    "personId": "b78864b1-71cc-438c-adb0-eefb01e45c87"
+  },
+  "Florian Suter": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "suter@ifu.baug.ethz.ch",
+    "personId": "b16174e6-9e73-4221-9d84-2277d5a0129d"
+  },
+  "Francesco Cirone": {
+    "companyName": "ecoinvent Centre",
+    "email": "cirone@ecoinvent.org",
+    "personId": "8b67b78e-b767-4edc-a24e-ce6aca222aaa"
+  },
+  "Frank Wellenreuther": {
+    "companyName": "IFEU GmbH",
+    "email": "frank.wellenreuther@ifeu.de",
+    "personId": "17d57aa1-b0c1-4ed8-979e-75ad2db0c629"
+  },
+  "Frank Werner": {
+    "companyName": "Werner Umwelt & Entwicklung",
+    "email": "frank@frankwerner.ch",
+    "personId": "00c7a068-1730-48bf-a7b3-275340049de5"
+  },
+  "Frank Werner (obsolete)": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "ce563038-95a9-4cd6-a7a1-313112eabcaa"
+  },
+  "Franziska St\u00f6ssel": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "stoessel@ifu.baug.ethz.ch",
+    "personId": "3645a080-7a28-4dc2-80ea-7bd61a11b4ad"
+  },
+  "Fran\u00e7ois Charron": {
+    "companyName": "Quantis",
+    "email": "francois.charron@quantis-intl.com",
+    "personId": "4fa3439d-a0d2-4eb8-9492-bf55d56fa076"
+  },
+  "Fran\u00e7ois Saunier": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "francois.saunier@polymtl.ca",
+    "personId": "37cc4296-1529-4587-9d00-4107455be7d7"
+  },
+  "Fredy Dinkel": {
+    "companyName": "Carbotech AG",
+    "email": "f.dinkel@carbotech.ch",
+    "personId": "a4e8c21b-214b-4d1d-8e0d-f0c46c11eaaf"
+  },
+  "Friederike Ziegler": {
+    "companyName": "SIK - Swedish Institute for Food and Biotechnology",
+    "email": "Friederike.Ziegler@sik.se",
+    "personId": "43545e4b-5990-4a45-9a2b-52e85e7a7bdc"
+  },
+  "Fr\u00e9d\u00e9ric Gindroz": {
+    "companyName": "ecoinvent Centre",
+    "email": "fgindroz@ethz.ch",
+    "personId": "dd720a14-6e1f-499e-bc2a-c0e9c5a4f16a"
+  },
+  "GUI Johnson": {
+    "companyName": "-",
+    "email": "guizj@ecdigit.com",
+    "personId": "dd510f08-c825-47e6-bd18-094ae7d02c3c"
+  },
+  "Gabor Doka": {
+    "companyName": "Doka Life Cycle Assessments",
+    "email": "gabor@doka.ch",
+    "personId": "e8d6ebac-c6d1-4f98-b4db-6613e1520289"
+  },
+  "Gabor Doka (obsolete)": {
+    "companyName": "Doka Life Cycle Assessments",
+    "email": "doka@ecoinvent.org",
+    "personId": "b05f6f5a-d4f6-48e5-88bc-38c98a05048d"
+  },
+  "Gabriel Smith": {
+    "companyName": "ecoinvent Centre",
+    "email": "smith@ecoinvent.org",
+    "personId": "dc71d188-24cb-4b24-a8a9-046f6fa0c600"
+  },
+  "Gabrielle van Durme": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "gabrielle.van-durme@polymtl.ca",
+    "personId": "1feb3028-8f86-49ba-96c9-6eec3ffc4229"
+  },
+  "Gaia Lu": {
+    "companyName": "ITRI",
+    "email": "gaialu@itri.org.tw",
+    "personId": "680ea8c4-332e-4183-9be3-6a56439e16f3"
+  },
+  "Gao Feng": {
+    "companyName": "-",
+    "email": "gaofeng@bjut.edu.cn",
+    "personId": "6d261ded-113a-4599-9def-97d198c465e4"
+  },
+  "Gediga Johannes": {
+    "companyName": "thinkstep",
+    "email": "johannes.gediga@thinkstep.com",
+    "personId": "5b57e639-2f6f-461c-8730-7f6ffe25a49a"
+  },
+  "Genevi\u00e8ve Martineau": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "genevieve.martineau@polymtl.ca",
+    "personId": "3f229bba-9b55-490c-b0c3-92121ff1b8cb"
+  },
+  "Geoff Brighty": {
+    "companyName": "Mura Technology",
+    "email": "g.brighty@muratechnology.com",
+    "personId": "4e734832-a7b5-4328-9d50-6507b5b2baa5"
+  },
+  "Georg Geissler": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "1b7d18d1-9d1a-4fbd-a965-89e0f2a8e8cd"
+  },
+  "Gerald Rebitzer (obsolete)": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "epfl@ecoinvent.org",
+    "personId": "ec67c6be-71e2-4212-b1dc-473046b88fb2"
+  },
+  "Germ\u00e1n Santa Mar\u00eda": {
+    "companyName": "Gaia Servicios Ambientales",
+    "email": "gsantamaria@gaiasa.com",
+    "personId": "70cdb5df-1d77-439c-a939-095f0a7b5ae8"
+  },
+  "Giovanna Chiumento": {
+    "companyName": "Universidade Tecnol\u00f3gica Federal do Paran\u00e1",
+    "email": "giovannachiumento@hotmail.com",
+    "personId": "b6146e9f-8b34-4a69-8c4c-4cd45c157c8f"
+  },
+  "Grant Finlayson": {
+    "companyName": "Athena Sustainable Materials Institute",
+    "email": "info@athenasmi.org",
+    "personId": "24e91193-6de8-4368-bb5b-afae07246e6b"
+  },
+  "GreenDelta": {
+    "companyName": "GreenDeltaTC",
+    "email": "it@greendeltatc.com",
+    "personId": "6631bee9-6e0a-4bf0-954e-ccdfd7dafaa0"
+  },
+  "Gregor Braun": {
+    "companyName": "-",
+    "email": "gregor.braun@empa.ch",
+    "personId": "b766d6d5-cfa9-4e09-adcb-bae978b6ce7f"
+  },
+  "Gregor Wernet": {
+    "companyName": "ecoinvent Centre",
+    "email": "wernet@ecoinvent.org",
+    "personId": "87296ea5-2149-44c3-8e36-b1256c92666a"
+  },
+  "Guillaume Bourgault": {
+    "companyName": "ecoinvent Centre",
+    "email": "bourgault@ecoinvent.org",
+    "personId": "8eccf3fe-5531-43de-ae57-61564ca77b5a"
+  },
+  "Gustavo Moraga": {
+    "companyName": "Universidade Federal do Rio Grande do Sul",
+    "email": "g.longaray@gmail.com",
+    "personId": "24a052e7-6601-40ee-96d4-6aa083679a29"
+  },
+  "Hajjaji Noureddine": {
+    "companyName": "National Engineering School of Gab\u00e8s, University of Gab\u00e8s",
+    "email": "hajjaji.nour@gmail.com",
+    "personId": "e4871400-574d-4033-bcfa-e61596766590"
+  },
+  "Hans-J\u00f6rg Althaus": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "d8f5bd0b-dcde-41a3-a370-4fd9f721d536"
+  },
+  "Harshita Soni": {
+    "companyName": "CII Green Business Centre",
+    "email": "harshita.soni@cii.in",
+    "personId": "f2f7629c-bae5-4362-bdd1-7b8747c10b8f"
+  },
+  "Heidi Hottenroth": {
+    "companyName": "-",
+    "email": "heidi.hottenroth@hs-pforzheim.de",
+    "personId": "f69490bf-ebfe-499e-829a-ed3f04b45f3c"
+  },
+  "Heiko Kunst": {
+    "companyName": "Ecological Systems Design, ETH Z\u00fcrich (obsolete)",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "413d3653-ce85-4750-bd57-f6e696b289d6"
+  },
+  "Helen Ann Hamilton": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "helen.hamilton62@gmail.com",
+    "personId": "7e22251a-fc46-4607-b32a-59b86ccd9577"
+  },
+  "Hemant Sharma": {
+    "companyName": "International Zinc Association",
+    "email": "hsharma@zinc.org",
+    "personId": "862685ad-7f23-4c52-b209-373bc77767f5"
+  },
+  "Henrique Rogerio Antunes de Souza Junior": {
+    "companyName": "-",
+    "email": "henrique_hjr@hotmail.com",
+    "personId": "f0048abe-db4e-451a-8acb-9935d3400c56"
+  },
+  "Hisko Baas": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "hisko.baas@agroscope.admin.ch",
+    "personId": "62bc659d-bd54-40ef-b53b-53401a6591fd"
+  },
+  "Hongtao Wang": {
+    "companyName": "Sichuan University",
+    "email": "wanghongtao@outlook.com",
+    "personId": "8663c5cd-561f-4ddb-b884-82d3f1812aa1"
+  },
+  "Hugues Imbeault-T\u00e9treault": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "hugues.imbeault@polymtl.ca",
+    "personId": "a84d170e-e428-4103-b895-7574b28536b4"
+  },
+  "ICL Group": {
+    "companyName": "ICL Group",
+    "email": "contactus@icl-group.com",
+    "personId": "ffcfc34e-8244-47ae-bf84-9117309c5974"
+  },
+  "ISOPA": {
+    "companyName": "J\u00f6rg Palmersheim",
+    "email": "joerg.palmersheim@isopa.org",
+    "personId": "3a784d00-e408-4517-a7a1-db2e3506e74b"
+  },
+  "Ian V\u00e1zquez-Rowe": {
+    "companyName": "Pontificia Universidad Cat\u00f3lica del Per\u00fa",
+    "email": "ian.vazquez@pucp.pe",
+    "personId": "c5cc9aef-e28e-4f21-b5b5-6cda1d46a3cb"
+  },
+  "Iasonas Ioannou": {
+    "companyName": "ecoinvent Centre",
+    "email": "ioannou@ecoinvent.org",
+    "personId": "45c856f2-52e0-4ef3-b8df-770d70319286"
+  },
+  "Ifu Test": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "technical-support@ecoinvent.org",
+    "personId": "205021aa-948a-4821-af4f-c1ad8f8c8bd1"
+  },
+  "Ilhaam Patel": {
+    "companyName": "The Green House",
+    "email": "ilhaam@tgh.co.za",
+    "personId": "eb535839-8520-4498-ad6c-371a41f13bef"
+  },
+  "Ingo Meinshausen": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "i.meinshausen@ifu.com",
+    "personId": "7c293dd1-65fe-4f45-bcf5-a6e8aab3b54c"
+  },
+  "Inho Kwak": {
+    "companyName": "Centre de la Propietat Forestal de Catalunya ",
+    "email": "dlsgh81@naver.com",
+    "personId": "0398e9d6-2f14-4a56-a3ff-eab1fc3bca56"
+  },
+  "Isabelle Grimaldi": {
+    "companyName": "ecoinvent Centre",
+    "email": "grimaldi@ecoinvent.org",
+    "personId": "92a2081e-caf1-445a-876f-2b5f1cc0b0bc"
+  },
+  "Ivan Mu\u00f1oz Ortiz": {
+    "companyName": "2.-0 LCA consultants",
+    "email": "im@lca-net.com",
+    "personId": "66109d31-fb99-4a5f-aedd-5424b4a57ebc"
+  },
+  "Jacomina VanderMerwe": {
+    "companyName": "ecoinvent Centre",
+    "email": "vandermerwe@ecoinvent.org",
+    "personId": "96428603-e8dd-429c-a208-eda3bfe5e327"
+  },
+  "Jade M\u00fcller Carneiro": {
+    "companyName": "Embrapa - Agroindustria Tropical",
+    "email": "jademullerc@gmail.com",
+    "personId": "146b9724-969b-4397-91f1-fe8d49a47559"
+  },
+  "James Salazar": {
+    "companyName": "Athena Sustainable Materials Institute",
+    "email": "james.salazar@athenasmi.org",
+    "personId": "5f07f259-e551-4ee3-b16e-4510f9e3811e"
+  },
+  "Jane Anderson": {
+    "companyName": "PE International",
+    "email": "j.anderson@pe-international.com",
+    "personId": "a376a75d-b24a-467d-83f9-fe8d960496be"
+  },
+  "Jannick H. Schmidt": {
+    "companyName": "2.-0 LCA consultants",
+    "email": "js@lca-net.com",
+    "personId": "7c3b694a-24fa-41b8-b34c-5021d4fb0362"
+  },
+  "Jean-Baptiste Bayart": {
+    "companyName": "Veolia",
+    "email": "Jean-Baptiste.BAYART@veolia.com",
+    "personId": "467977f9-f45b-49c5-9450-539ef68fa283"
+  },
+  "Jean-Francois Menard": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "jean-francois.menard@polymtl.ca",
+    "personId": "9d276fa9-83c2-4b60-9bc7-596c0f17650f"
+  },
+  "Jenna Watson": {
+    "companyName": "2.-0 LCA consultants",
+    "email": "jw@lca-net.com",
+    "personId": "e1be882f-7d0d-4e97-972b-f0c1ab1f3f51"
+  },
+  "Jens Borken-Kleefeld": {
+    "companyName": "International Institute for Applied Systems Analysis",
+    "email": "borken@iiasa.ac.at",
+    "personId": "39d3970f-c9df-41d7-8738-3d0d6b1bf7c7"
+  },
+  "Jens Lansche": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "jens.lansche@agroscope.admin.ch",
+    "personId": "f48a446f-c675-4da4-a835-637f2eb8250f"
+  },
+  "Jens Peters": {
+    "companyName": "University of Alcal\u00e1",
+    "email": "jens.peters@uah.es",
+    "personId": "5799f61d-e45a-47a1-bfac-5fe4ff7d8fe3"
+  },
+  "Jeroen Guin\u00e9e": {
+    "companyName": "Universiteit Leiden",
+    "email": "guinee@cml.leidenuniv.nl",
+    "personId": "e0bec437-217c-4e23-a627-a5ef239fe1a1"
+  },
+  "Jerome Payet": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "jerome.payet@epfl.ch",
+    "personId": "544e59e5-2463-4b74-9f92-b329d23dc27b"
+  },
+  "Johannes M\u00fcller": {
+    "companyName": "ecoinvent Centre",
+    "email": "mueller@ecoinvent.org",
+    "personId": "52f4f2ad-0a8b-44b5-86eb-7fb567d703d4"
+  },
+  "John Erik Hermansen": {
+    "companyName": "Aarhus University",
+    "email": "John.Hermansen@agrsci.dk",
+    "personId": "ab02256c-6edc-4164-b7ae-2910b8fcb2eb"
+  },
+  "John Jewell": {
+    "companyName": "PE International",
+    "email": "j.jewell@pe-international.com",
+    "personId": "600b92bc-353d-482d-8007-0836c349513f"
+  },
+  "Jorrit Leijting": {
+    "companyName": "PR\u00e9 Consultants",
+    "email": "leijting@pre.nl",
+    "personId": "43d43d56-7a5c-4ca4-a5c3-a9cc53e92a87"
+  },
+  "Jo\u00ebl Lagneau": {
+    "companyName": "INTERCHANVRE",
+    "email": "contact@interchanvre.com",
+    "personId": "63b75efa-f5d8-496d-9512-69bd0a369611"
+  },
+  "Juanita Barrera ": {
+    "companyName": "EarthShift Global",
+    "email": "juanita@earthshiftglobal.com",
+    "personId": "41e8db4d-d766-4009-a1de-21dc4e39bcdf"
+  },
+  "Juha Matti Katajajuuri": {
+    "companyName": "MTT Agrifood Research",
+    "email": "juha-matti.katajajuuri@mtt.fi",
+    "personId": "e06b03d5-14bc-4255-9fc3-a67d55e6536c"
+  },
+  "Julian Schnetzer": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "julian.schnetzer@art.admin.ch",
+    "personId": "aee89a09-42c7-4b39-b9c1-f6470ba9e789"
+  },
+  "Juliana F. Picoli": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "juliana.picoli@fgv.br",
+    "personId": "334a00e8-b1c4-40bc-8b71-15bee3f601e6"
+  },
+  "Juliana Picoli": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "juliana.picoli@colaborador.embrapa.br",
+    "personId": "29ed0f55-cd8e-4551-afe9-ce3bae43ca91"
+  },
+  "Jun Kono": {
+    "companyName": "Chalmers University of Technology",
+    "email": "jun.kono@chalmers.se",
+    "personId": "2f4e8677-9711-48be-a513-b7ba58307f3c"
+  },
+  "Jungbluth Niels": {
+    "companyName": "ESU-services Ltd.",
+    "email": "info@esu-services.ch",
+    "personId": "1c9d06b2-453f-4380-affe-5a351f77c93d"
+  },
+  "J\u00f6rg Schweinle": {
+    "companyName": "Johann Heinrich von Th\u00fcnen Institut",
+    "email": "joerg.schweinle@thuenen.de",
+    "personId": "da8e99ae-325e-45d8-9aec-b06476b6d9ff"
+  },
+  "J\u00fcrgen Reinhard": {
+    "companyName": "Quantis",
+    "email": "juergen.reinhard@quantis-intl.com",
+    "personId": "b46b4b20-c857-4080-8a67-46e2642a4fd7"
+  },
+  "J\u00fcrgen Sutter": {
+    "companyName": "Ecological Systems Design, ETH Z\u00fcrich (obsolete)",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "4e412379-4901-477d-bbc1-3e2797ab9350"
+  },
+  "K.Flasher;E.Barros;J.Aguirre;S.Martines": {
+    "companyName": "Inclusive Circular Economy and Sustainable Development Research Group (ECI) of the University of Cuenca ",
+    "email": "paul.vanegas@ucuenca.edu.ec",
+    "personId": "85e786ac-b447-46e2-a7d2-ea9d5959614c"
+  },
+  "K.Padron;E.Barros;J.Aguirre;S.Martines": {
+    "companyName": "Inclusive Circular Economy and Sustainable Development Research Group (ECI) of the University of Cuenca ",
+    "email": "paul.vanegas@ucuenca.edu.ec",
+    "personId": "940b528c-ae3d-42f4-ba5a-829cc12a22bb"
+  },
+  "Kanchan Bohara": {
+    "companyName": "ecoinvent Centre",
+    "email": "bohara@ecoinvent.org",
+    "personId": "9a15d816-eebd-4834-a4a5-f19084046a51"
+  },
+  "Karen Muir": {
+    "companyName": "ZHAWIUNR",
+    "email": "muir@zhaw.ch",
+    "personId": "74edccc8-78d6-45c2-b5ce-74729a4b02e1"
+  },
+  "Karin Treyer": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "karin.treyer@psi.ch",
+    "personId": "610bd1b2-fec3-4e8e-84a6-76fef8b6b7b8"
+  },
+  "Katharina Meyer": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "katharina.meyer@empa.ch",
+    "personId": "c7feabf9-c594-4ad6-964a-46a881282f10"
+  },
+  "Katherine Matos": {
+    "companyName": "-",
+    "email": "k.matos@pucp.pe",
+    "personId": "674d5956-bdca-4606-9193-3f4ee2c4ab49"
+  },
+  "Katriina Valkeap\u00e4\u00e4": {
+    "companyName": "Finnish Forest Industries Federation ",
+    "email": "katriina.valkeapaa@forestindustries.fi",
+    "personId": "c785f320-7c14-429f-81a2-ad70f87ba91b"
+  },
+  "Katsuyuki Nakano": {
+    "companyName": "JEMAI",
+    "email": "nakano@jemai.or.jp",
+    "personId": "ec4f0ca9-4253-4af8-baad-3e3f9487fe64"
+  },
+  "Ken McMahon": {
+    "companyName": "-",
+    "email": "ken.mcmahon59@gmail.com",
+    "personId": "0bc89281-529b-4391-87a9-fa54b7f2ad6f"
+  },
+  "Kenza Benabderrazik": {
+    "companyName": "Sofies",
+    "email": "kenza.benabderrazik@sofiesonline.com",
+    "personId": "49452253-b703-478f-9110-a8dbdbe03a74"
+  },
+  "Klaus Richter": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "b53baac4-ba96-471f-b444-e407bdd4bbaf"
+  },
+  "Konrad Schleiss": {
+    "companyName": "NOENTRY",
+    "email": "k.schleiss@bluewin.ch",
+    "personId": "cb4a3f95-41a1-4c51-a35e-f863c4e469c9"
+  },
+  "Kristi Marcela Padr\u00f3n Flasher": {
+    "companyName": "Inclusive Circular Economy and Sustainable Development Research Group (ECI) of the University of Cuenca ",
+    "email": "kristi.padronf@ucuenca.edu.ec",
+    "personId": "5bd887aa-0d50-4fe8-b7b5-e4be150355d9"
+  },
+  "Kuch": {
+    "companyName": "Bio Intelligence Service",
+    "email": "pkuch@bio.deloitte.fr",
+    "personId": "6e93b935-74dd-4cb6-b503-d424a411aff3"
+  },
+  "Lars Gunnar Furelid Tellnes": {
+    "companyName": "\u00d8stfold University College",
+    "email": "lars.g.tellnes@hiof.no",
+    "personId": "310fbbbd-3c71-4529-9295-7c9fa2fc485b"
+  },
+  "Laura Peano": {
+    "companyName": "Quantis",
+    "email": "laura.peano@quantis-intl.com",
+    "personId": "125522ae-7935-493f-be91-258062b10392"
+  },
+  "Laura Rubio": {
+    "companyName": "Quantis",
+    "email": "laura.rubio@quantis-intl.com",
+    "personId": "697566ba-02bf-4170-8d49-85bc82e1fa71"
+  },
+  "Laura de Baan": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "laura.debaan@env.ethz.ch",
+    "personId": "4c279cfd-47f1-47ac-b801-7c0be9a016aa"
+  },
+  "Laurent": {
+    "companyName": "NOENTRY",
+    "email": "achillebenjamin.laurent@uqac.ca",
+    "personId": "6c483d26-c3df-4519-b0bc-ca084209f2b7"
+  },
+  "Lauriane Bichot": {
+    "companyName": "ecoinvent Centre",
+    "email": "bichot@ecoinvent.org",
+    "personId": "4a42242f-f833-47c1-b20e-93a53d64591b"
+  },
+  "Lea Wollensack": {
+    "companyName": "ecoinvent Centre",
+    "email": "wollensack@ecoinvent.org",
+    "personId": "9b594973-b215-47d7-8a65-579159dba829"
+  },
+  "Leo Breedveld": {
+    "companyName": "2B Consulenza Ambientale",
+    "email": "info@to-be.it",
+    "personId": "2aa462d9-aaff-49d6-8eb7-bf489c3dc8dd"
+  },
+  "Leticia De Santi Barrantes": {
+    "companyName": "Universidade Tecnol\u00f3gica Federal do Paran\u00e1",
+    "email": "leticia.desantib@gmail.com",
+    "personId": "ac2c911d-b460-4156-bbd0-ddcea87b0e43"
+  },
+  "Liliane Klemann": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "liliane_kl@hotmail.com",
+    "personId": "549081a0-cf0f-4a5f-b020-c52a9725a523"
+  },
+  "Lindita Bushi": {
+    "companyName": "Athena Sustainable Materials Institute",
+    "email": "lindita.bushi@athenasmi.org",
+    "personId": "72999df6-e381-4c80-92a8-8baabfcaba88"
+  },
+  "Linlin Wu": {
+    "companyName": "International Aluminium Institute",
+    "email": "wu@international-aluminium.org",
+    "personId": "86dcf0d6-836a-44ca-9b09-6d049be78064"
+  },
+  "Longchun Jiang": {
+    "companyName": "Zhejiang Jiaren New Materials Co., Ltd",
+    "email": "jianglch1598@163.com",
+    "personId": "0cfe55d3-91ac-474f-b209-b0b5710ee728"
+  },
+  "Louis Brimacombe": {
+    "companyName": "-",
+    "email": "louis.brimacombe@gmail.com",
+    "personId": "e049b5f5-4742-4486-add7-d5fc2bf19c4d"
+  },
+  "Lucia Valsasina": {
+    "companyName": "ecoinvent Centre",
+    "email": "valsasina@ecoinvent.org",
+    "personId": "ebf45305-b87c-4d3d-b74f-fbc6677bca1b"
+  },
+  "Luisa Paolotti": {
+    "companyName": "Universit\u00e0 degli Studi di Perugia",
+    "email": "luisa.paolotti@gmail.com",
+    "personId": "b22bdd87-5a72-487e-a28f-3efb50aa7c91"
+  },
+  "Lu\u00edza Santana Franca": {
+    "companyName": "UFRJ",
+    "email": "luizasfranca@poli.ufrj.br",
+    "personId": "6c6190ab-0686-4b8d-af88-185d7efe3147"
+  },
+  "M. Gauch": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "marcel.gauch@empa.ch",
+    "personId": "2627a3ea-6f73-4824-bc88-a56d463a929e"
+  },
+  "MIchael Spielmann": {
+    "companyName": "Quantis",
+    "email": "michael.spielmann@quantis-intl.com",
+    "personId": "37ab7339-e76e-4698-afbe-bfc4cacfdee8"
+  },
+  "Madhuri Nigam": {
+    "companyName": "Lady Irwin College",
+    "email": "madhurinigam@gmail.com",
+    "personId": "7c4ed8aa-65b1-4541-a80a-978da1185973"
+  },
+  "Maggie Osses": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "cb542ecd-922e-425f-962c-398b3c6efc3a"
+  },
+  "Maggie Wildnauer": {
+    "companyName": "thinkstep",
+    "email": "maggie.wildnauer@thinkstep.com",
+    "personId": "679a69b3-07fd-4cbd-b5f9-aadf6bfefeb3"
+  },
+  "Makrem  Cherni": {
+    "companyName": "FST",
+    "email": "makrem.cherni@fst.utm.tn",
+    "personId": "366d1d0c-1904-40ba-812a-d0a8364b8ea7"
+  },
+  "Malin Johansson": {
+    "companyName": "Research Institutes of Sweden-Innventia",
+    "email": "malin.johansson@ri.se",
+    "personId": "eb548c0a-ca70-4f81-b044-7930da3fdba2"
+  },
+  "Manuele Margni": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "manuele.margni@quantis-intl.com",
+    "personId": "eed8009e-62ea-4c9b-8b91-057e413f1aa5"
+  },
+  "Manuele Margni (obsolete)": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "epfl@ecoinvent.org",
+    "personId": "d05172ed-3f6d-483f-b075-24d4ec6deeb2"
+  },
+  "Marcel G\u00f3mez": {
+    "companyName": "JG Proyectos, El Masnou Marcel G\u00f3mez Consultoria Ambiental SL",
+    "email": "marcel614@gmail.com",
+    "personId": "9bc33ba0-2d86-4277-9093-1366f7a2a614"
+  },
+  "Marcela Valles Lange": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "Marcela.Lange@empa.ch",
+    "personId": "2e6539f1-2242-48e7-a84c-98fda79a84be"
+  },
+  "Marcella Ruschi Mendes Saade": {
+    "companyName": "University of Campinas\u2019 School of Civil Engineering, Architecture and Urbanism",
+    "email": "rms.marcella@gmail.com",
+    "personId": "7f185a26-9e2b-45ce-9c74-fe6d6cfc8947"
+  },
+  "Marcelo A. B. Morandi": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "marcelo.morandi@embrapa.br",
+    "personId": "2c6fd737-b30d-404f-ba1d-bd8362b9fbd6"
+  },
+  "Marcelo H. Hirakuri": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "marcelo.hirakuri@embrapa.br",
+    "personId": "599c612d-a633-4521-8ec8-6f8232d27df7"
+  },
+  "Marcial Vargas-Gonzalez": {
+    "companyName": "Quantis",
+    "email": "marcial.vargas-gonzalez@quantis-intl.com",
+    "personId": "41bd135e-11be-43ad-9530-6f1309a3764c"
+  },
+  "Marco Mina": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "marco.mina@psi.ch",
+    "personId": "50ac01f8-b922-47bf-91a3-e0b6949ce0b2"
+  },
+  "Maresa Bussa": {
+    "companyName": "ESU-services Ltd.",
+    "email": "bussa@esu-services.ch",
+    "personId": "6548e661-f493-47b6-9e74-bd744c4bd5ef"
+  },
+  "Maria Enroth": {
+    "companyName": "MSG Management System Group AB",
+    "email": "maria.enroth@msgab.se",
+    "personId": "b6f1b07e-821b-446d-8200-6c6de4e90403"
+  },
+  "Maria Hecher": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "maria.hecher@psi.ch",
+    "personId": "a025a249-57de-4c05-b865-c5133f7a943d"
+  },
+  "Marianne Leuenberger": {
+    "companyName": "ESU-services Ltd.",
+    "email": "esu@esu-services.ch",
+    "personId": "dd1cbd50-eae2-4a14-8f1e-c278175ab90e"
+  },
+  "Marie Demaegdt": {
+    "companyName": "Alliance for European Flax-Linen & Hemp ",
+    "email": "mdemaegdt@allianceflaxlinenhemp.eu",
+    "personId": "9b0eb3cc-1e39-49a0-82c4-c5daa9cd6035"
+  },
+  "Marilia Folegatti": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "marilia.folegatti@embrapa.br",
+    "personId": "686a5435-f4a4-44f2-b938-a25700d0086d"
+  },
+  "Marina Santa Rosa Rocha": {
+    "companyName": "Centre de Ressources des Technologies pour l'Environnement, CRP Henri Tudor",
+    "email": "marinasrr@poli.ufrj.br",
+    "personId": "f06ef1d1-61e8-4c26-8ad0-de2193c430ff"
+  },
+  "Marion Si\u00e9": {
+    "companyName": "Si\u00e9",
+    "email": "marion.sie@gmail.com",
+    "personId": "a7bfdeb7-32da-428a-9be3-12e2dbdcd1fc"
+  },
+  "Marisa Vieira": {
+    "companyName": "PR\u00e9 Consultants",
+    "email": "Vieira@pre.nl",
+    "personId": "57378f6b-a790-4b8d-a730-80f891d77e94"
+  },
+  "Mariska J. de Wild-Scholten": {
+    "companyName": "NOENTRY",
+    "email": "m.dewild@ecn.nl",
+    "personId": "f3a4297b-f198-41c4-b8cf-ad5c28a5d074"
+  },
+  "Mark Huijbregts": {
+    "companyName": "Radboud University Nijmegen",
+    "email": "M.Huijbregts@science.ru.nl",
+    "personId": "f04a411e-5096-44dc-ab57-5e2bf62443c0"
+  },
+  "Martin Kilga": {
+    "companyName": "Sinum AG",
+    "email": "martin.kilga@sinum.com",
+    "personId": "227117a7-4335-43cd-b22d-7fd3461f4a92"
+  },
+  "Martin Lehmann": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "martin.lehmann@empa.ch",
+    "personId": "bce42dbf-7ee6-4482-a3fd-d41b7fc9b1bc"
+  },
+  "Martina Alig": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "martina.alig@art.admin.ch",
+    "personId": "6d6177e6-c6ae-4757-82fe-7410924208ad"
+  },
+  "Maryl\u00e8ne Dussault": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "support@ecoinvent.org",
+    "personId": "5c477382-e72a-4a18-95db-321453898bf7"
+  },
+  "Mar\u00edlia I. S. Folegatti Matsuura": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "marilia.folegatti@embrapa.br",
+    "personId": "c8fa709d-f7ac-494d-b94e-5878a818de6e"
+  },
+  "Mateus Chagas": {
+    "companyName": "Brazilian Center of Research in Energy and Materials",
+    "email": "mateusvarginha@gmail.com",
+    "personId": "33c7a67b-390d-4590-9beb-0f61ed24407e"
+  },
+  "Mateus F Chagas": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "mateus.chagas@lnbr.cnpem.br",
+    "personId": "2fef12a8-4145-4526-8292-b5bb2decf40c"
+  },
+  "Mateus Ferreira Chagas": {
+    "companyName": "Laborat\u00f3rio Nacional de Ci\u00eancia e Tecnologia do Bioetanol",
+    "email": "mateus.chagas@bioetanol.org,br",
+    "personId": "33f27fe1-e837-4e4c-9ff3-3243d0da0982"
+  },
+  "Mathilde Ceccaldi": {
+    "companyName": "EVEA",
+    "email": "m.ceccaldi@evea-conseil.com",
+    "personId": "12cfe0a9-704f-4eeb-b683-b6b1d7b4fcb2"
+  },
+  "Mathilde Taveau": {
+    "companyName": "Plastic Recyclers Europe",
+    "email": "mathilde.taveau@plasticsrecyclers.eu",
+    "personId": "bb1cb8e1-af7f-4918-9549-9c6184f4aaa7"
+  },
+  "Matthew Burke": {
+    "companyName": "The Green House",
+    "email": "matt@tgh.co.za",
+    "personId": "08b46f79-11da-4a71-9d6b-e94a1a068618"
+  },
+  "Matthias Klingler": {
+    "companyName": "B\u00fcro f\u00fcr Umweltchemie",
+    "email": "m.klingler@umweltchemie.ch",
+    "personId": "a05b9cea-1fad-465b-a97c-be62a7b64ab8"
+  },
+  "Matthias Stucki": {
+    "companyName": "ZHAW",
+    "email": "matthias.stucki@zhaw.ch",
+    "personId": "6eee06de-ed9b-45f3-b4f0-6b7f9a89a093"
+  },
+  "Matthias Stucki (obsolete but e-mail OK)": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "matthias.stucki@esu-services.ch",
+    "personId": "a0d9a8b9-af8c-4e82-9c18-5d1d92c82338"
+  },
+  "Matthias Tuchschmid": {
+    "companyName": "SBB",
+    "email": "matthias.tuchschmid@sbb.ch",
+    "personId": "9fd99e18-26da-48ae-966c-e6ba9e9f7c1b"
+  },
+  "Matthias Tuchschmid (obsolete)": {
+    "companyName": "NOENTRY",
+    "email": "esu-services@ecoinvent.org",
+    "personId": "235b75f8-e517-48b2-8f45-d22958d3497d"
+  },
+  "Matthias Y. Reich": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "matthias.reich@empa.ch",
+    "personId": "c30bbfb1-79e7-46f4-976d-a2cbfd1440b2"
+  },
+  "Mattia Clementi": {
+    "companyName": "ecoinvent Centre",
+    "email": "clementi@ecoinvent.org",
+    "personId": "35e4b88b-9a88-474e-8af0-7ee045ce2fef"
+  },
+  "Medeiros Diego Lima": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "Diego.Medeiros@empa.ch",
+    "personId": "42ab17b2-379f-45db-9ea1-5e43393293db"
+  },
+  "Mehul Tatia": {
+    "companyName": "Confederation of Indian Industry",
+    "email": "mehul.tatia@cii.in",
+    "personId": "b5801258-d40a-4c9b-b4ab-a7b523037516"
+  },
+  "Melanie Haupt": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "haupt@ifu.baug.ethz.ch",
+    "personId": "b894ebe8-6bd4-4a0d-9942-bc769d1ad25d"
+  },
+  "Michael Boesch (obsolete)": {
+    "companyName": "Ecological Systems Design, ETH Z\u00fcrich (obsolete)",
+    "email": "eth.esd@ecoinvent.org",
+    "personId": "555f4a57-e063-4c4b-8f39-f0c9032d13dc"
+  },
+  "Michael Elias Boesch": {
+    "companyName": "Aveny",
+    "email": "michael.boesch@aveny.ch",
+    "personId": "a35d6e99-19d3-4784-b54a-3585ba03431c"
+  },
+  "Michael Lettenmeier": {
+    "companyName": "Wuppertal Institute for Climate, Environment and Energy",
+    "email": "michael.lettenmeier@wupperinst.org",
+    "personId": "1ef173e3-4c48-4135-b20e-b46c13cb169d"
+  },
+  "Michael Spielmann (obsolete)": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "f6c00074-2f5c-4d60-862f-55336e001531"
+  },
+  "Michael Sturges": {
+    "companyName": "Research Institutes of Sweden-Innventia",
+    "email": "michael.sturges@ri.se",
+    "personId": "80e3f966-7171-458a-ab26-79f9f14621f8"
+  },
+  "Michele Bounous": {
+    "companyName": "ecoinvent Centre",
+    "email": "michele.bounous@gmail.com",
+    "personId": "2e525e29-8843-4e0d-b6c1-54b5035ee7a0"
+  },
+  "Miguel F. Astudillo": {
+    "companyName": "University of Sherbrooke",
+    "email": "miguel@astudillo.com",
+    "personId": "2cef9fc5-f86d-49c1-9bdd-3fbe1d988b53"
+  },
+  "Mike Chudacoff": {
+    "companyName": "NOENTRY",
+    "email": "chudacoff@oekoscience.ch",
+    "personId": "66681112-91e4-4579-a67a-7c9fc5e69dff"
+  },
+  "Mikkel Thrane": {
+    "companyName": "Danisco A/S",
+    "email": "mikkel.thrane@danisco.com",
+    "personId": "739fa09d-503b-4d5f-bf9d-43376a0ff5b3"
+  },
+  "Mireille Faist Emmenegger": {
+    "companyName": "Quantis",
+    "email": "Mireille.Faist@quantis-intl.com",
+    "personId": "725942b9-cd77-4359-a564-8500b92d9dc4"
+  },
+  "Mireille Faist Emmenegger (obsolete)": {
+    "companyName": "ESU-services Ltd.",
+    "email": "esu-services@ecoinvent.org",
+    "personId": "167b2cd0-d5a9-492e-9c26-9616ba70d19c"
+  },
+  "Mirjam Busch": {
+    "companyName": "IFEU GmbH",
+    "email": "mirjam.busch@ifeu.de",
+    "personId": "f7865331-c8b1-430f-8a04-0d6f59971015"
+  },
+  "Mischa Classen": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "13365919-8270-4b06-af15-21b71d229865"
+  },
+  "Mischa Zschokke-Gohl": {
+    "companyName": "Carbotech AG",
+    "email": "m.zschokke@carbotech.ch",
+    "personId": "fb0e4bc2-6d48-4df3-9015-ab56bacd8393"
+  },
+  "Mohammad Mosharraf Hossain, PhD": {
+    "companyName": "Institute of Forestry and Environmental Sciecnes, University of Chittagong",
+    "email": "mosharraf@ifescu.ac.bd",
+    "personId": "4d8cbfdb-e994-4e32-b3eb-652f9cdc8b89"
+  },
+  "Muhammed Noor Hossain": {
+    "companyName": "-",
+    "email": "noorhossain28@gmail.com",
+    "personId": "183edfff-d98c-410a-b3c0-481b35ebfa0a"
+  },
+  "M\u00e0ri L. Shiosawa": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "m156567@dac.unicamp.br",
+    "personId": "24555bab-f50d-44e5-86fb-3afaeccf502d"
+  },
+  "Natalia Crespo Mendes": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "nataliacm@alumni.usp.br",
+    "personId": "f962388a-b76f-43f3-bf3c-413e11eb84ee"
+  },
+  "Natascha Kljun": {
+    "companyName": "Infras",
+    "email": "natascha.kljun@infras.ch",
+    "personId": "16a59585-3379-48c1-bfcb-705137fef7a2"
+  },
+  "Nathan Pelletier": {
+    "companyName": "Food Systems PRISM Lab",
+    "email": "prism.lab@ubc.ca",
+    "personId": "321cab0d-dfa9-4157-af73-0353de4bac19"
+  },
+  "Nawshad Haque": {
+    "companyName": "CSIRO",
+    "email": "Nawshad.Haque@csiro.au",
+    "personId": "3385ef50-7534-4ba8-b599-461d60eb7635"
+  },
+  "Nicolas Denz": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "n.denz@ifu.com",
+    "personId": "4f804c15-2e22-48b9-bf4d-0ed70c67c8bb"
+  },
+  "Nicole Bamber": {
+    "companyName": "Food Systems PRISM Lab",
+    "email": "prism.lab@niubc.ca",
+    "personId": "ab36c55a-e08e-48b0-b292-1c6d8a26bb2b"
+  },
+  "Niels Jungbluth": {
+    "companyName": "ESU-services Ltd.",
+    "email": "info@esu-services.ch",
+    "personId": "8fbf5a63-e0e2-4035-a35a-1d72f98e7ec3"
+  },
+  "Niko Heeren": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "nheeren@ethz.ch",
+    "personId": "8bbb08d2-d40a-4a8f-beca-838e21ea3dca"
+  },
+  "Nikolia Stoikou": {
+    "companyName": "ecoinvent Centre",
+    "email": "stoikou@ecoinvent.org",
+    "personId": "e98986e8-51ee-468d-b4de-00f989a6dc7f"
+  },
+  "Nilza Patricia Ramos": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "nilza.ramos@embrapa.br",
+    "personId": "172069db-1943-4bdf-9818-6e507127bab7"
+  },
+  "Nora Minas": {
+    "companyName": "-",
+    "email": "nora.minas@empa.ch",
+    "personId": "11e7f61f-bbc0-4bf0-958d-3efe961e75b7"
+  },
+  "Nydia Suppen Reynaga": {
+    "companyName": "Center for LCA and Sustainable Design",
+    "email": "nsuppen@centroacv.com.mx",
+    "personId": "6bd446ce-1cc4-4f80-b942-eb43808f5b39"
+  },
+  "Olaf Tietje": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "eth.uns@ecoinvent.org",
+    "personId": "cd7a0fa2-e839-4d2b-a2e1-86526988d950"
+  },
+  "Olivia Kaarlela": {
+    "companyName": "ecoinvent Centre",
+    "email": "kaarlela@ecoinvent.org",
+    "personId": "5c7338d1-dced-4ea1-84a5-e3bd800965e1"
+  },
+  "Otavio Cavalett": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "otavio.cavalett@ntnu.no",
+    "personId": "6d84f774-9c2b-435d-9543-6a9f518e00cf"
+  },
+  "Ot\u00e1vio Cavalett": {
+    "companyName": "Laborat\u00f3rio Nacional de Ci\u00eancia e Tecnologia do Bioetanol",
+    "email": "otavio.cavalett@bioetanol.org.br",
+    "personId": "8618b3ee-873c-4b72-846b-1c8c99943aee"
+  },
+  "P Duvernois": {
+    "companyName": "Deloitte Conseil",
+    "email": "pduvernois@deloitte.fr",
+    "personId": "45c451d7-4616-4650-8ade-ef251a378ef4"
+  },
+  "P V Kiran Ananth": {
+    "companyName": "CII Green Business Centre",
+    "email": "kiran.ananth@cii.in",
+    "personId": "19b1e9a7-7870-4b27-b9d5-e25e074f378e"
+  },
+  "Pablo Tirado": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "pablo.tirado-seco@polymtl.ca",
+    "personId": "1bd1c9a0-1fba-4bb3-ac28-b30bbc2b2388"
+  },
+  "Parag Mundada": {
+    "companyName": "CII Green Business Centre",
+    "email": "mundada.parag@cii.in",
+    "personId": "0f6f5f48-6e8e-4b3f-aca9-c3ee173af4e8"
+  },
+  "Parikhit Sinha": {
+    "companyName": "First Solar",
+    "email": "parikhit.sinha@firstsolar.com",
+    "personId": "7d7a5e0d-9acf-48b2-b562-15a21ca7bcf4"
+  },
+  "Park Sur": {
+    "companyName": "Hanyang Univ. suBest Lab.",
+    "email": "sincalyp@hanyang.ac.kr",
+    "personId": "39dcadb1-48b6-433a-b123-36a3028dfa51"
+  },
+  "Pascal Lesage": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "pascal.lesage@polymtl.ca",
+    "personId": "e4de3332-2c72-47a8-a50b-c9e42f5e251d"
+  },
+  "Patrik Mouron": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "lca@agroscope.admin.ch",
+    "personId": "54ebede8-0eb8-4ab3-8ef9-f8bff7e403cf"
+  },
+  "Paul Beckert": {
+    "companyName": "ecoinvent Centre",
+    "email": "beckert@ecoinvent.org",
+    "personId": "13f989db-8b62-4458-a166-a5540d67f116"
+  },
+  "Paul Lugg": {
+    "companyName": "FoxSyght Finishing Systems",
+    "email": "pslugg@foxsyght.com",
+    "personId": "6412cfcb-c8e3-430f-85a6-ee840a6ebec1"
+  },
+  "Philip Nuss": {
+    "companyName": "Umweltbundesamt Deutschland - Federal Environment Agency Germany",
+    "email": "philip.nuss@uba.de",
+    "personId": "96caafe9-7f77-42e1-ac38-ab9e53ae1a4b"
+  },
+  "Philipp Stadler": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "eth.uns@ecoinvent.org",
+    "personId": "9ba56945-505c-4ff1-ae35-17eef1031be6"
+  },
+  "Philippa Notten": {
+    "companyName": "The Green House",
+    "email": "pippa@tgh.co.za",
+    "personId": "19fd67c5-a1f9-43cc-ac2c-a45863ba3f60"
+  },
+  "Philippe Loubet": {
+    "companyName": "ENSCBP - Bordeaux INP",
+    "email": "philippe.loubet@u-bordeaux.fr",
+    "personId": "96770571-53f9-4cab-a137-d5004ccf09ce"
+  },
+  "Philippe Stolz": {
+    "companyName": "treeze",
+    "email": "stolz@treeze.ch",
+    "personId": "b4acbc68-0edc-47c7-8ada-6520926d28d5"
+  },
+  "Philpp Thalmann": {
+    "companyName": "NOENTRY",
+    "email": "philipp.thalmann@raumlufthygiene.ch",
+    "personId": "9401e975-96cc-4917-8286-eb26d0a6125b"
+  },
+  "Pierre-Olivier Roy": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "pierre-olivier-3.roy@polymtl.ca",
+    "personId": "aeed1c9e-cd03-4f7f-b7b4-ae1aa7baafe4"
+  },
+  "Prasad Gangane": {
+    "companyName": "CII Green Business Centre",
+    "email": "prasad.gangane@cii.in",
+    "personId": "56b7f5f8-e7da-44bc-84ed-7a37976ad8d6"
+  },
+  "Rachel Muigai": {
+    "companyName": "University of Johannesburg ",
+    "email": "rmuigai@uj.ac.za",
+    "personId": "dcf72317-d4c7-41f7-ada0-5fe7989d4900"
+  },
+  "Rainer Zah": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "f0da557a-bce4-401a-adba-894f06ead31b"
+  },
+  "Raul Lamas Bregante": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "raulraul81@hotmail.com",
+    "personId": "0f1fb4bd-eda6-4e9f-8175-454f698ac1f2"
+  },
+  "Reinout Heijungs": {
+    "companyName": "Universiteit Leiden",
+    "email": "Heijungs@cml.leidenuniv.nl",
+    "personId": "8a0ca22d-27ea-4ad7-afdb-d2a62c626951"
+  },
+  "Renan Novaes": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "renan.milagres@embrapa.br",
+    "personId": "28f608ef-9ac6-4db4-8447-a4360122dfd5"
+  },
+  "Ricardo Pazianotto": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "ricardo.pazianotto@embrapa.br",
+    "personId": "12b95c41-ed64-41a6-8cda-a7a801120280"
+  },
+  "Rita Bolliger": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "09c3557a-1cb4-4c5a-8fdc-299b275c9c12"
+  },
+  "Rita Rita de C\u00e1ssia Monteiro Marzullo": {
+    "companyName": "Ag\u00eancia C\u00e9rebro Tecnologia da Informa\u00e7\u00e3o Ltda",
+    "email": "rita.monteiro@gmail.com",
+    "personId": "c57afe9d-30e8-46fe-a7af-208c0486af15"
+  },
+  "Rita Schulze": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "rita.schulze@art.admin.ch",
+    "personId": "0a0b2b9a-de70-430c-bfae-d50730714aec"
+  },
+  "Robert Istrate": {
+    "companyName": "Institute of Environmental Sciences (CML), Leiden University",
+    "email": "i.r.istrate@cml.leidenuniv.nl",
+    "personId": "5c6e92c9-ebc6-4e97-a792-4f0449ac2324"
+  },
+  "Robert Kutter": {
+    "companyName": "Arizona State University, The Sustainability Consortium",
+    "email": "kutter.tsc@asue.du",
+    "personId": "9b6182f3-33ac-4ecf-8fae-e658375dde64"
+  },
+  "Roberto Dones": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "7d294b43-1017-4989-a6c4-58bc94ef2984"
+  },
+  "Robyn Michelle Tan": {
+    "companyName": "Fuzzy Innovations LLC",
+    "email": "pecktan@yahoo.com",
+    "personId": "43cdd98a-2768-441b-9c5d-4addadd5adde"
+  },
+  "Roland Hischier": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "roland.hischier@empa.ch",
+    "personId": "89ae408f-f095-4276-96ca-c871888cf632"
+  },
+  "Roland Steiner": {
+    "companyName": "ESU-services Ltd.",
+    "email": "esu-services@ecoinvent.org",
+    "personId": "0ce4975c-bfb8-4ca1-a199-8fa7b02976c1"
+  },
+  "Rolf Frischknecht": {
+    "companyName": "ESU-services Ltd.",
+    "email": "esu-services@ecoinvent.org",
+    "personId": "55b093c6-58f6-4adf-8dcd-91bce8c4bdc7"
+  },
+  "Rondon": {
+    "companyName": "Centre Technique de la Plasturgie et du Composite",
+    "email": "ewen.rondon@ct-ipc.com",
+    "personId": "a11b75cf-70ca-4812-a0ca-b164a8f6fab0"
+  },
+  "Russo": {
+    "companyName": "University of Cape Town",
+    "email": "v.russo@uct.ac.za",
+    "personId": "baa322cd-d8c1-4256-bc17-0c93acb261f0"
+  },
+  "Ruth Freiermuth Knuchel": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "ruth.freiermuth@art.admin.ch",
+    "personId": "3f4f5ddb-8201-4b95-ab81-223282a3f990"
+  },
+  "Sabrina Ludmann": {
+    "companyName": "IFEU GmbH",
+    "email": "sabrina.ludmann@ifeu.de",
+    "personId": "9867ad7e-d6ea-4618-be1b-72ca1c09a214"
+  },
+  "Sander Hegger": {
+    "companyName": "PR\u00e9 Consultants",
+    "email": "Support@pre.nl",
+    "personId": "6333253c-5fcc-4554-a238-a5ea58e549b6"
+  },
+  "Sandra Roos": {
+    "companyName": "NOENTRY",
+    "email": "sandra.roos@swerea.se",
+    "personId": "fc848521-7e46-403c-a763-df47ef6b52fc"
+  },
+  "Sandro Lorenz": {
+    "companyName": "ecoinvent Centre",
+    "email": "lorenz@ecoinvent.org",
+    "personId": "4fbb716e-c18f-4124-b03b-04cb4440579f"
+  },
+  "Sangram Savant": {
+    "companyName": "ecoinvent Centre",
+    "email": "savant@ecoinvent.org",
+    "personId": "c45b7fd5-6a82-496b-b5ea-e5084217aa2f"
+  },
+  "Sangwon Suh": {
+    "companyName": "Bren School of Environmental Science & Management, University of California Santa Barbara",
+    "email": "suh@bren.ucsb.edu",
+    "personId": "5538aba5-3384-41a5-9484-818443e49bff"
+  },
+  "Sanjay Jain": {
+    "companyName": "-",
+    "email": "sanjumad1@gmail.com",
+    "personId": "5bdbeafc-6967-463f-8372-ad771a5e7aa4"
+  },
+  "Sanjeevan Bajaj": {
+    "companyName": "Federation of Indian Chambers of Commerce and Industry ",
+    "email": "s.bajaj@ficci.com",
+    "personId": "4a2beadf-855e-43fe-86d6-7cad1d7a8576"
+  },
+  "Sarah McLaren": {
+    "companyName": "Massey University",
+    "email": "S.McLaren@massey.ac.nz",
+    "personId": "4b1317c3-be44-42b5-a847-78fcde5e098f"
+  },
+  "Sebastian Jensen": {
+    "companyName": "ecoinvent Centre",
+    "email": "jensen@ecoinvent.org",
+    "personId": "a3398438-ab8e-44d7-a702-916cc3bd76e0"
+  },
+  "Sebastian Kunde": {
+    "companyName": "ecoinvent Centre",
+    "email": "kunde@ecoinvent.org",
+    "personId": "2228e6a3-173e-4e39-a131-58261dfc73b8"
+  },
+  "Sebastian R\u00fcter": {
+    "companyName": "Johann Heinrich von Th\u00fcnen Institut",
+    "email": "sebastian.rueter@thuenen.de",
+    "personId": "6c79bd02-63ca-4f63-9a1c-5ba5fc9a9bff"
+  },
+  "Sebastiano Meier": {
+    "companyName": "NOENTRY",
+    "email": "art@ecoinvent.org",
+    "personId": "a7b17163-0c31-4d85-ac46-29ff63f44bbd"
+  },
+  "Sebastien Taillemite": {
+    "companyName": "ecovamed",
+    "email": "sebastien.taillemite@ecovamed.com",
+    "personId": "a092f2b1-22bc-4e94-84cb-b5383c1732a5"
+  },
+  "Sebastien Thomassey": {
+    "companyName": "Ecole Nationale Sup\u00e9rieure des Arts et Indutries Textiles",
+    "email": "sebastien.thomassey@ensait.fr",
+    "personId": "070a70ac-1f1f-4ff1-b7d8-de9f07c95e86"
+  },
+  "Shiny Samuel": {
+    "companyName": "CII Green Business Centre",
+    "email": "shiny.samuel@cii.in",
+    "personId": "096e0dbf-0e23-4b59-84fe-59d5e5ef6cad"
+  },
+  "Shirley Fagnen": {
+    "companyName": "CIRAIG, Ecole Polytechnique Montreal",
+    "email": "shirley.fagnen@polymtl.ca",
+    "personId": "c1e4ce1a-549f-4e15-9025-b49f5e334207"
+  },
+  "Sigma Das": {
+    "companyName": "FICCI Quality Forum",
+    "email": "ilcm@ficci.com.",
+    "personId": "f053f89f-f485-49a7-ae33-56b6aaa64b68"
+  },
+  "Silvio Blaser": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "fc70bc59-790e-4d56-9e39-709762472826"
+  },
+  "Simon Gmunder": {
+    "companyName": "Quantis",
+    "email": "simon.gmuender@gmail.com",
+    "personId": "4306be76-15cc-426b-8ee1-0cfe672e3bd9"
+  },
+  "Simon Gm\u00fcnder": {
+    "companyName": "Quantis",
+    "email": "simon.gmuender@gmail.com",
+    "personId": "c75786e1-4f99-4021-94f3-3c57b16ea0b1"
+  },
+  "Simone Ehrenberger": {
+    "companyName": "German Aerospace Centre",
+    "email": "simone.ehrenberger@dlr.de",
+    "personId": "208dac77-3be4-4272-9c63-431747e425dc"
+  },
+  "Simone Fazio": {
+    "companyName": "ecoinvent Centre",
+    "email": "fazio@ecoinvent.org",
+    "personId": "829c6c14-fa5f-4cd2-bb2e-4f6273dd6b8d"
+  },
+  "Sirje Vares": {
+    "companyName": "VTT Technical Research Centre",
+    "email": "sirje.vares@vtt.fi",
+    "personId": "03fc815f-122a-4300-afda-f21b141999d2"
+  },
+  "Sjouke Beemsterboer": {
+    "companyName": "NOENTRY",
+    "email": "sjouke@chalmers.se",
+    "personId": "f26a24c3-ce55-4662-9720-be53c4cd3fc6"
+  },
+  "Sofia Parada Tur": {
+    "companyName": "ecoinvent Centre",
+    "email": "parada@ecoinvent.org",
+    "personId": "1b11366d-47b7-40d4-b85d-7d7063b22209"
+  },
+  "Stefan Erzinger": {
+    "companyName": "NOENTRY",
+    "email": "art@ecoinvent.org",
+    "personId": "224b9ce2-d95d-415f-aebf-fe6534baba97"
+  },
+  "Stefanie Hellweg": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "15be7cb7-28ff-42a7-af00-0ec8e669b0d3"
+  },
+  "Stefano Castelanelli": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "stefanoc@student.ethz.ch",
+    "personId": "8a301190-706e-41dc-9a81-629a17d72774"
+  },
+  "Stephan Pfister": {
+    "companyName": "ETH Z\u00fcrich",
+    "email": "stephan.pfister@ifu.baug.ethz.ch",
+    "personId": "b96d0acc-8482-4c83-8be5-f00a58b8925f"
+  },
+  "Studenten Studentinnen": {
+    "companyName": "-",
+    "email": "jhuo@ethz.ch",
+    "personId": "a922c775-8ae8-4a70-a85b-2e575d724872"
+  },
+  "St\u00e9phanie Eg\u00e9e": {
+    "companyName": "Independent Sustainability Consultant",
+    "email": "steph.egee@gmail.com",
+    "personId": "0362f1c1-f90c-4f0d-a2cf-bb68ed59abad"
+  },
+  "Sybille B\u00fcsser": {
+    "companyName": "ESU-services Ltd.",
+    "email": "buesser@esu-services.ch",
+    "personId": "571d9e03-6533-4bb7-bc19-724bd850f44f"
+  },
+  "S\u00e9bastien Humbert": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "epfl@ecoinvent.org",
+    "personId": "526a4e4e-d857-4397-b57b-9ee507b23f26"
+  },
+  "S\u00e9bastien Lasvaux": {
+    "companyName": "University of Applied Sciences of Western Switzerland (HES-SO)",
+    "email": "sebastien.lasvaux@heig-vd.ch",
+    "personId": "54041273-a78a-4599-b56c-c1389f42a291"
+  },
+  "Tereza Levova": {
+    "companyName": "ecoinvent Centre",
+    "email": "levova@ecoinvent.org",
+    "personId": "f86c02d3-2c12-4c25-ad03-33af05bcfe63"
+  },
+  "Thierry Boulard": {
+    "companyName": "INRA",
+    "email": "boulard@sophia.inra.fr",
+    "personId": "5abb3327-fe29-4be8-b538-df61743070e6"
+  },
+  "Thomas Froehlich": {
+    "companyName": "IFEU GmbH",
+    "email": "thomas.froehlich@ifeu.de",
+    "personId": "b22e1a96-5d8c-4f96-bbb5-19b16ca68595"
+  },
+  "Thomas Fr\u00f6hlich": {
+    "companyName": "IFEU GmbH",
+    "email": "thomas.froehlich@ifeu.de",
+    "personId": "d66a1839-11d2-4a7e-a1b8-91ceca714c8a"
+  },
+  "Thomas Heck": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "psi@ecoinvent.org",
+    "personId": "6083ef2d-50bc-415c-bfd2-592c8d160778"
+  },
+  "Thomas Hofstetter": {
+    "companyName": "Eidg. Anstalt f\u00fcr Wasserversorgung, Abwasserreinigung und Gew\u00e4sserschutz",
+    "email": "eth.s-u@ecoinvent.org",
+    "personId": "6d5f52bb-4958-4cd3-ac87-c5d1567d7733"
+  },
+  "Thomas K\u00e4gi": {
+    "companyName": "Stiftung myclimate - The Climate Protection Partnership",
+    "email": "cms_info@myclimate.org",
+    "personId": "d0042658-e937-4dee-8ce1-e70f9b94b28b"
+  },
+  "Thomas K\u00f6llner": {
+    "companyName": "University Bayreuth",
+    "email": "thomas.koellner@uni-bayreuth.de",
+    "personId": "133c583d-7161-48db-a05a-7296b668243c"
+  },
+  "Thomas Nemecek": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "thomas.nemecek@agroscope.admin.ch",
+    "personId": "cb2a55cb-5170-46a5-819d-75173b1914e9"
+  },
+  "Thomas Sonderegger": {
+    "companyName": "ecoinvent Centre",
+    "email": "sonderegger@ecoinvent.org",
+    "personId": "fa897224-f29f-4cd6-8eaf-9bd9d1f55b52"
+  },
+  "Timothy Grant": {
+    "companyName": "Life Cycle Strategies",
+    "email": "Tim@lifecycles.com.au",
+    "personId": "2c7f180e-9527-43f0-8969-94bb38a7091c"
+  },
+  "Timoth\u00e9e Harvey": {
+    "companyName": "-",
+    "email": "timothee.harvey@ct-ipc.com",
+    "personId": "a50707e9-61f1-4a0a-af93-12fb72f63012"
+  },
+  "Tina K\u00fcnniger": {
+    "companyName": "Empa D\u00fcbendorf (obsolete)",
+    "email": "empa@ecoinvent.org",
+    "personId": "6c7accd1-b33a-4f55-bc6b-0b3e69c1f13d"
+  },
+  "Tom Etheridge": {
+    "companyName": "equilibriollc",
+    "email": "equilibriollc@gmail.com",
+    "personId": "8cba1744-db88-4230-b042-29595b9afdd1"
+  },
+  "Tristan Carrerre": {
+    "companyName": "Tokai Cobex",
+    "email": "tristan.carrere@tokaicobex.com",
+    "personId": "55a2af41-2703-4934-acca-9748ef65dc0c"
+  },
+  "Tuija Waldvogel": {
+    "companyName": "Forschungsanstalt Agroscope Reckenholz-T\u00e4nikon ART",
+    "email": "tuija.waldvogel@agroscope.admin.ch",
+    "personId": "1fba8d25-6c39-48e5-9fe9-9f72f3ba4d89"
+  },
+  "UPR/VE CEFIC group, supported by EY NL": {
+    "companyName": "-",
+    "email": "amh@cefic.be",
+    "personId": "65686f1d-5f16-48a6-af73-84e311b21e23"
+  },
+  "Valentina Castellani": {
+    "companyName": "Joint Research Centre",
+    "email": "Valentina.CASTELLANI@ec.europa.eu",
+    "personId": "d5ef5759-87f1-4ab1-a090-9e14b3f6b1ee"
+  },
+  "Valentina Negri": {
+    "companyName": "ETH Zurich",
+    "email": "valentina.negri@chem.ethz.ch",
+    "personId": "5c1699cc-80bd-45fe-a292-6d1265a35216"
+  },
+  "Valeria Superti": {
+    "companyName": "ecoinvent Centre",
+    "email": "superti@ecoinvent.org",
+    "personId": "1f77a4b7-277c-4afd-bd77-ede7f2601a0d"
+  },
+  "Venkee Ratnam": {
+    "companyName": "FICCI Quality Forum",
+    "email": "ilcm@ficci.com",
+    "personId": "d22dadb2-46a8-46c3-8c0c-1c85205a3f65"
+  },
+  "Veronica Munyongani": {
+    "companyName": "-",
+    "email": "mnyver002@myuct.ac.za",
+    "personId": "dd2d63ec-f0bb-415f-bed6-641ad695fb9a"
+  },
+  "Veronique Michaud": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "veronique.michaud@epfl.ch",
+    "personId": "47825f2e-cf90-4859-b2b7-8e6298cb8c28"
+  },
+  "Viachaslau Filimonau": {
+    "companyName": "Bournemouth University",
+    "email": "vfilimonau@bournemouth.ac.uk",
+    "personId": "0486b102-bfbc-4ba1-8e7d-0f72255b3caf"
+  },
+  "Vincent Rossi": {
+    "companyName": "Quantis",
+    "email": "vincent.rossi@quantis-intl.com",
+    "personId": "8d9ec4d2-bb82-4e33-b3b7-3b8da648908c"
+  },
+  "Vin\u00edcius G. Maciel": {
+    "companyName": "Embrapa - Meio Ambiente",
+    "email": "vinicius@enciclo.com.br",
+    "personId": "21179245-4fc4-4ed5-ad05-3a9f33a0ad81"
+  },
+  "Violaine Magaud": {
+    "companyName": "Quantis",
+    "email": "violaine.magaud@quantis-intl.com",
+    "personId": "e0ebe843-ca7a-465b-9468-6ca9151bad90"
+  },
+  "Viviane Barros": {
+    "companyName": "Embrapa - Agroindustria Tropical",
+    "email": "vivianebarros1@hotmail.com",
+    "personId": "2fc189a4-d150-4611-a61e-3e8dde5f0bb8"
+  },
+  "Wolfram Scharnhorst": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "empa@ecoinvent.org",
+    "personId": "7a36237a-feca-4caf-b996-b45acae29474"
+  },
+  "Xavier Bengoa": {
+    "companyName": "Quantis",
+    "email": "xavier.bengoa@quantis-intl.com",
+    "personId": "a55ea4cf-a20f-41b3-879d-504eb49639ee"
+  },
+  "Xiaojin Zhang": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "xiaojin.zhang@psi.ch",
+    "personId": "023a09e1-71e0-4572-98dc-0e1779ab0c50"
+  },
+  "Yannick Le Guern": {
+    "companyName": "Bio Intelligence Service",
+    "email": "yannick.leguern@biois.com",
+    "personId": "cafc6caa-02b0-4a1f-a7bf-63faef0f97de"
+  },
+  "Yolanda N\u00fa\u00f1ez": {
+    "companyName": "Technological Centre of Miranda de Ebro",
+    "email": "yolandanunez@ctme.es",
+    "personId": "56593aef-04a1-43c5-b48d-55a84cc5c11f"
+  },
+  "Yves Loerincik": {
+    "companyName": "Ecole Polytechnique Federale de Lausanne",
+    "email": "yves.loerincik@epfl.ch",
+    "personId": "102a578d-d4a1-4bf9-9272-b57249532af9"
+  },
+  "Yvonne Baeuerle": {
+    "companyName": "Paul Scherrer Institute",
+    "email": "yvonne.baeuerle@psi.ch",
+    "personId": "f5a64b21-993e-476f-82aa-db205d93436c"
+  },
+  "Zimdars": {
+    "companyName": "Quantis",
+    "email": "christopher.zimdars@quantis-intl.com",
+    "personId": "e90c819a-9ee7-4188-a6be-ac8af6f2b2a2"
+  },
+  "Zouhour Khlia": {
+    "companyName": "National Engineering School of Gab\u00e8s, University of Gab\u00e8s",
+    "email": "zouhourkehila@gmail.com",
+    "personId": "411dd210-1f31-41ec-bf16-68f461ffdc33"
+  },
+  "Zuhlke Engineering": {
+    "companyName": "Zuhlke Engineering",
+    "email": "mbs@zuhlke.com",
+    "personId": "b0246ba6-3b1d-4dc2-b66a-cccbd1b004f6"
+  },
+  "[Current User]": {
+    "companyName": "",
+    "email": "no@email.com",
+    "personId": "788d0176-a69c-4de0-a5d3-259866b6b100"
+  },
+  "[Deleted]Iasonas Ioannou": {
+    "companyName": "ecoinvent Centre",
+    "email": "ioannou@ecoinvent.org",
+    "personId": "575ac889-26b4-511f-a813-26ea99340132"
+  },
+  "[Deleted]Makrem Cherni": {
+    "companyName": "University of Tunis El Manar",
+    "email": "makrem.cherni@fst.utm.tn",
+    "personId": "dc0ed551-1258-4fbb-b1d6-87fc2d5bb225"
+  },
+  "[System]": {
+    "companyName": "",
+    "email": "support@ecoinvent.org",
+    "personId": "c4597934-ecac-422c-b431-382e85fdcb83"
+  },
+  "ecoinvent ecoinvent": {
+    "companyName": "dummy",
+    "email": "tereza.levova@empa.ch",
+    "personId": "ac27db9e-1020-4a92-a17f-af65ac76a284"
+  },
+  "im": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "i.meinshausen@ifu.com",
+    "personId": "a6fc9149-663c-4569-a80e-1efcd74ca2ba"
+  },
+  "testing meinshausen": {
+    "companyName": "Institut f\u00fcr Umweltinformatik",
+    "email": "ingo.meinshausen@ipoint-systems.de",
+    "personId": "085e02cc-fad5-48bb-a861-fade1fbed9e3"
+  },
+  "trainee ecoinvent": {
+    "companyName": "ecoinvent Centre",
+    "email": "emilia.moreno@empa.ch",
+    "personId": "0bdd7d40-7663-41b6-b182-be1626270408"
+  },
+  "trine henriksen": {
+    "companyName": "Eidgen\u00f6ssische Materialpr\u00fcf- und -forschungsanstalt",
+    "email": "trinehenriksen1@gmail.com",
+    "personId": "3c07b849-2849-4526-9633-5c913867f299"
+  },
+  "workshop_participant": {
+    "companyName": "ecoinvent Centre",
+    "email": "support@ecoinvent.org",
+    "personId": "27d0c610-bd9a-4cb3-9489-b163f991b69e"
+  }
+}
