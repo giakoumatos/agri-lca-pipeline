@@ -6,5 +6,15 @@
   // Python's compiled caches in one folder instead of a __pycache__ in each.
   "terminal.integrated.env.windows": {
     "PYTHONPYCACHEPREFIX": "${workspaceFolder}\\.venv\\pycache"
-  }
+  },
+  // The code folders, so the editor resolves the imports between them the
+  // way the programs do at run time (each adds its folders to the path).
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/meta_model",
+    "${workspaceFolder}/pipeline",
+    "${workspaceFolder}/spold",
+    "${workspaceFolder}/calculators/olcapest",
+    "${workspaceFolder}/calculators/multinutrient",
+    "${workspaceFolder}/calculators/agri_diesel"
+  ]
 }
