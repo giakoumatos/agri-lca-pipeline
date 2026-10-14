@@ -941,9 +941,20 @@ def own_diesel_for(own_diesel: set, key: tuple) -> set:
 
 # ── Dataset splitting ─────────────────────────────────────────────────────────
 
+def split_part_name(project: str, number: int) -> str:
+    """The file name of a project's split part: letters, digits and _ only
+    ('grass, AR' -> grass_AR_part_1.xlsx)."""
+    safe = re.sub(r'[^0-9A-Za-z]+', '_', project).strip('_') or 'project'
+    return f"{safe}_part_{number}.xlsx"
+
+
 def split_crop_datasets(df_exchanges: pd.DataFrame, df_sheets: dict,
-                        split_dir: str | None = None) -> None:
+                        split_dir: str | None = None, project: str | None = None) -> None:
     split_dir = split_dir or SPLIT_OUTPUT_DIR
+    # The parts are named after the project ("grass, AR - part 1.xlsx"), so a
+    # part opened on its own says whose datasets it holds.  Without one given,
+    # the project is the folder above crop_datasets_new (output/<project>/).
+    project = project or os.path.basename(os.path.dirname(os.path.abspath(split_dir)))
     os.makedirs(split_dir, exist_ok=True)
     # A row with no activityName belongs to no dataset.  Left in, it forms a
     # chunk key of its own and the split reports an activity that does not
@@ -971,8 +982,7 @@ def split_crop_datasets(df_exchanges: pd.DataFrame, df_sheets: dict,
             else:
                 filtered[sn] = sd
         complete_sheet_schema(filtered)
-        split_file = os.path.join(split_dir,
-                                  f"agri_diesel_new_output_part_{i + 1}.xlsx")
+        split_file = os.path.join(split_dir, split_part_name(project, i + 1))
         with pd.ExcelWriter(split_file, engine='openpyxl') as writer:
             for sn, sd in filtered.items():
                 if sn == 'review' and sd.columns.empty:
@@ -1542,7 +1552,8 @@ if __name__ == "__main__":
                         os.remove(_old)
                     except OSError:
                         pass
-                split_crop_datasets(_combined['exchanges'], _combined, _sdir_final)
+                split_crop_datasets(_combined['exchanges'], _combined, _sdir_final,
+                                    _project)
                 print(f'[Diesel BATCH] Split complete -> {_sdir_final}')
 
         if _failed:

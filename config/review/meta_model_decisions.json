@@ -1,4 +1,12 @@
 {
+  "exchange placement:Dinitrogen monoxide :: air / low population density, long-term||agricultural air emission not in non-urban air||Dinitrogen monoxide in air / low population density, long-term": {
+    "column": "exchange placement:Dinitrogen monoxide :: air / low population density, long-term",
+    "first_seen": "Congo/soybean production, organic, BR-PR, 2022 - 2023.xlsx",
+    "found": "Dinitrogen monoxide in air / low population density, long-term",
+    "kind": "agricultural air emission not in non-urban air",
+    "value": "air / non-urban air or from high stacks",
+    "when": "2026-10-13T12:01:15"
+  },
   "exchange placement:Mineral oil :: air / non-urban air or from high stacks||exchange is in a compartment the flow does not have||Mineral oil in air / non-urban air or from high stacks": {
     "column": "exchange placement:Mineral oil :: air / non-urban air or from high stacks",
     "first_seen": "ILCIDAF project full/clementine_production__organic__irrigated__fresh_grade__south.xlsx",

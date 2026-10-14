@@ -23,6 +23,8 @@ running the skills by hand afterwards:
     answered once for every dataset)                          18 (agri)
   Livestock: nitrate to ground water, herd structure,
     product names the ecoinvent markets link to               livestock methodology
+  The amount agrees with the figure its comment states
+    (passes, trees, litres per hectare, ...)                  69 (Checks) / 8 (agri)
 
 What the pipeline makes certain is not re-checked: the DQG pedigree formula
 (Checks 76-78) is applied by spold_converter_new itself, from the scores
@@ -51,6 +53,10 @@ ROW_FORMULA = '73-74 (Checks)'
 ROW_AIR = '18 (agri)'
 ROW_ORPHAN = '127 (Checks) / 24 (agri)'
 ROW_LIVESTOCK = ''          # the livestock methodology has no checklist row
+# Not in CHECKED_ROWS: agri 8 also asks that the passes be a round number that
+# makes sense agronomically, which a matching comment does not answer, and 69
+# is already covered by ROW_EXCHANGES.
+ROW_COMMENT_AMOUNTS = '69 (Checks) / 8 (agri)'
 
 # The rows above, for the review workbook's Checklist status.
 CHECKED_ROWS = (ROW_UNCERTAINTY, ROW_MANDATORY, ROW_PRICE, ROW_EQUATIONS, ROW_UNIT,
@@ -288,7 +294,7 @@ def is_livestock(sheets: dict) -> bool:
 
 def run(sheets: dict, dataset: str, activity: str, project: str, applied: dict,
         Finding, exchange_prefix: str = 'exchange:', placement_column=None,
-        remembered=None, rejected=None) -> list:
+        remembered=None, rejected=None, yield_of=None) -> list:
     """
     Run every check on one dataset's sheets.  Returns Findings.
 
@@ -297,7 +303,9 @@ def run(sheets: dict, dataset: str, activity: str, project: str, applied: dict,
     reported.  `placement_column(name, compartment, subcompartment)` keys a
     placement decision the way the model's apply_fix moves rows;
     `remembered(column, kind, found)` returns an answer already given for
-    the same question, so it is not asked again.
+    the same question, so it is not asked again.  `yield_of(activityName)`
+    is the activity's yield in kg/ha, or None -- what turns a comment's
+    per-hectare figure into the per-kg amount it should match.
     """
     remembered = remembered or (lambda column, kind, found: None)
     rejected = rejected or (lambda key: False)    # apply = no in the Corrections sheet
@@ -601,55 +609,312 @@ def run(sheets: dict, dataset: str, activity: str, project: str, applied: dict,
                f'but is no variableName or parameter of this dataset, so the formula cannot '
                f'be evaluated (a shifted cell often lands text here).', ROW_FORMULA)
 
-    # ── Agricultural air emissions in non-urban air (agri 18).  The checklist
-    # says "generally", so it is a decision -- one answer for every dataset
-    # with the same flow in the same place -- not an automatic move.
+    # ── Agricultural air emissions in non-urban air (agri 18), always: as in
+    # ecoinvent's own crop and livestock datasets.  Moved like a placement
+    # answer (apply_fix), so a flow already in non-urban air takes the amount
+    # into its row, and the move is flagged in the comment; apply = no in
+    # Corrections keeps a dataset's placement.
     if placement_column and {'compartment', 'subcompartment', 'group'} <= set(exchanges.columns):
+        import meta_model_new as model
         target = f'air / {AIR_AGRI_SUB}'
+        kind = 'agricultural air emission not in non-urban air'
         pairs = {(_text(r['name']), _text(r.get('subcompartment'))) for _, r in rows
                  if _text(r['name']) in AIR_AGRI and _text(r.get('compartment')) == 'air'}
         for name, sub in sorted(pairs):
             if sub == AIR_AGRI_SUB or f'{name}|air|{AIR_AGRI_SUB}' not in md_elem:
                 continue
             column = placement_column(name, 'air', sub)
-            kind = 'agricultural air emission not in non-urban air'
             found = f'{name} in air / {sub}'
-            answer = remembered(column, kind, found)
-            if answer == f'air / {sub}':
-                continue                    # you said keep it where it is
-            if answer and not rejected(f'{project}||{dataset}|{column}|{kind}'):
-                # You said move it: done again on every run, a --fresh one
-                # included, without asking twice.
-                new_c, _, new_s = str(answer).partition(' / ')
-                if f'{name}|{new_c.strip()}|{new_s.strip()}' in md_elem:
-                    mask = ((exchanges['name'].map(_text) == name)
-                            & (exchanges['compartment'].map(_text) == 'air')
-                            & (exchanges['subcompartment'].map(_text) == sub))
-                    for col, value in (('compartment', new_c.strip()),
-                                       ('subcompartment', new_s.strip())):
-                        if exchanges[col].dtype != object:
-                            exchanges[col] = exchanges[col].astype(object)
-                        exchanges.loc[mask, col] = value
-                    applied[f'{project}||{dataset}|{column}|{kind}'] = (
-                        f'{name}: air / {sub} -> {answer} ({int(mask.sum())} row(s)), '
-                        f'your earlier answer', dataset)
-                    report(column, found, answer, kind, 'WARNING',
-                           f'Moved to {answer}, as you answered for this placement before.',
-                           ROW_AIR, fixed=True, proposal=answer)
-                    continue
-            report(column, found, target, kind, 'ACCEPTABLE_FOR_NOW',
-                   "Agricultural air emissions (NH3, N2O, NOx, CH4, NMVOC) generally go to "
-                   "non-urban air, as in ecoinvent's own crop and livestock datasets "
-                   "(checklist agri 18; livestock methodology section 6). Pick 1 to move "
-                   "them in every dataset listed, or 2 if this placement is deliberate.",
-                   ROW_AIR, proposal=target,
-                   options=((f'move to {target}', target),
-                            (f'keep in air / {sub}', f'air / {sub}')))
+            key = f'{project}||{dataset}|{column}|{kind}'
+            if rejected(key):
+                continue                    # apply = no: this dataset keeps it
+            ok, description = model.apply_fix(sheets, column, kind, target)
+            if ok:
+                applied[key] = (description, dataset)
+                report(column, found, target, kind, 'WARNING',
+                       f'{description}. Agricultural air emissions (NH3, N2O, NOx, CH4, NMVOC) '
+                       f'go to non-urban air, as in ecoinvent\'s own crop and livestock datasets '
+                       f'(checklist agri 18; livestock methodology section 6).',
+                       ROW_AIR, fixed=True, proposal=target)
+            else:
+                report(column, found, target, kind, 'BLOCKING',
+                       f'Could not be moved to {target}: {description}.', ROW_AIR,
+                       proposal=target)
+        exchanges = sheets['exchanges']     # a merge replaces the sheet
+
+    # ── The amount agrees with the figure its comment states (69 / agri 8).
+    _comment_amounts(exchanges, yield_of, exchange_prefix, report)
 
     if is_livestock(sheets):
         findings.extend(_livestock(sheets, rows, dataset, activity, project, Finding,
                                    exchange_prefix, md_inter))
     return findings
+
+
+# ── Comment figures against amounts ─────────────────────────────────────────
+# Each family is a way the data providers' comments state the figure an
+# amount was computed from.  Only these are read: a number in a comment is
+# as often a source year, a distance or a reference value as the amount, so a
+# number is compared only where the wording says what it is.
+_NUM = r'(\d+(?:[.,]\d+)?(?:[eE][-+]?\d+)?)'
+_PASSES_RE = re.compile(r'corresponds to\s+' + _NUM + r'\s+applications?\b', re.I)
+_TREES_RE = re.compile(_NUM + r'\s+of trees per ha divided by the lifetime years of the '
+                       r'orchard\s*\(\s*' + _NUM, re.I)
+_PLANTING_RE = re.compile(r'planting (?:of )?' + _NUM + r'\s+trees per hectare.*?lifespan of\s+'
+                          + _NUM + r'\s+years(?:,? with the first (\w+) years? unproductive)?',
+                          re.I | re.S)
+_DIESEL_PASS_RE = re.compile(r'diesel consumption of this field operation is\s+' + _NUM
+                             + r'\s*kg per hectare', re.I)
+_DIESEL_MJ_RE = re.compile(_NUM + r'\s*kg of diesel per hectare', re.I)
+_LCV_RE = re.compile(_NUM + r'\s*MJ/kg', re.I)
+_WATER_RE = re.compile(_NUM + r'\s*m(?:3|³)\s+of water', re.I)
+_KWH_RE = re.compile(_NUM + r'\s*kWh\b', re.I)
+# 'Deltamethrin (6,64E-07 kg); Mineral Oil (3,93E-04)': the parts of the amount.
+_PART_RE = re.compile(r'[A-Za-z][\w\- ]*?\(\s*' + _NUM + r'\s*(?:kg)?\s*\)')
+_SPLIT_RE = re.compile(r'air \((\d+(?:\.\d+)?)%\), water \((\d+(?:\.\d+)?)%\) and soil '
+                       r'\((\d+(?:\.\d+)?)%\)', re.I)
+_WORD_NUMBERS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6,
+                 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10}
+_COMMENT_TOLERANCE = 0.02           # beyond the rounding of the stated figure
+_APPROXIMATE_TOLERANCE = 0.10       # 'approximately 30 m3'
+
+
+def _figure(text: str) -> float:
+    return float(text.replace(',', '.'))
+
+
+def _tolerance(text: str, comment: str) -> float:
+    """The relative difference a figure written as `text` allows: its own
+    rounding (half its last decimal), at least _COMMENT_TOLERANCE.  A whole
+    number -- 2 applications, 400 trees -- is a count, not a rounding."""
+    mantissa, _, exponent = text.replace(',', '.').lower().partition('e')
+    rounding = 0.0
+    if '.' in mantissa or exponent:
+        decimals = len(mantissa.partition('.')[2])
+        half = 0.5 * 10 ** (-decimals) * 10 ** int(exponent or 0)
+        value = abs(_figure(text))
+        rounding = half / value if value else 0.0
+    floor = _APPROXIMATE_TOLERANCE if re.search(r'approx|around|about|~', comment, re.I) \
+        else _COMMENT_TOLERANCE
+    return max(floor, rounding)
+
+
+def _is_year(text: str) -> bool:
+    return re.fullmatch(r'(?:19|20)\d\d', text) is not None
+
+
+def _explain_ratio(ratio: float, comment: str) -> str:
+    """When the amount is the stated figure times another number the comment
+    names (55 interventions, 2 passes), say so: it is then usually the
+    comment's 'total' that is per intervention."""
+    for text in re.findall(_NUM, comment):
+        number = _figure(text)
+        if number > 1 and not _is_year(text) and abs(ratio / number - 1) < 0.02:
+            return (f' The amount is {number:g} times the stated figure, and {number:g} is '
+                    f'another number in the comment -- the figure may be per '
+                    f'operation rather than the total.')
+    return ''
+
+
+def _comment_amounts(exchanges, yield_of, prefix, report) -> None:
+    """Report every exchange whose amount contradicts a figure its comment states."""
+    if 'comment' not in exchanges.columns or 'amount' not in exchanges.columns:
+        return
+    if 'activityName' in exchanges.columns:
+        activities = exchanges.groupby(exchanges['activityName'].map(_text), sort=False)
+    else:
+        activities = [('', exchanges)]
+    unchecked = set()
+    for activity_name, rows in activities:
+        yield_kg_ha = yield_of(activity_name) if yield_of else None
+        reference = rows[rows['group'].map(_text) == 'ReferenceProduct'] \
+            if 'group' in rows.columns else rows.iloc[0:0]
+        product = next((a for a in map(_number, reference['amount']) if a), 1.0)
+        # Per hectare = amount x yield / the reference amount it is given for.
+        per_ha = (lambda amount: amount * yield_kg_ha / product) if yield_kg_ha else None
+        operations = {_text(r['name']).lower(): _number(r['amount'])
+                      for _, r in rows.iterrows() if _text(r.get('unitName')) == 'ha'}
+
+        mismatches, per_ha_claims = [], 0
+        for _, row in rows.iterrows():
+            comment = _text(row.get('comment'))
+            amount = _number(row.get('amount'))
+            if not comment or amount is None or not re.search(r'\d', comment):
+                continue
+            name, unit = _text(row.get('name')), _text(row.get('unitName'))
+            claims = _claims(name, unit, amount, comment, per_ha, product, operations)
+            if claims is None:
+                unchecked.add(name)
+                continue
+            per_ha_claims += sum(claim[4] == 'per ha' for claim in claims)
+            mismatches += [(name, unit, amount, comment) + claim for claim in claims
+                           if claim[0] and abs(claim[1] / claim[0] - 1) > claim[2]]
+
+        # Every per-hectare figure off by one factor: the amounts were
+        # computed with another yield than the land occupation gives.
+        factors = [actual / stated for *_, stated, actual, _t, _w, basis in mismatches
+                   if basis == 'per ha']
+        common = ''
+        if 1 < len(factors) == per_ha_claims and max(factors) / min(factors) < 1.01:
+            factor = sum(factors) / len(factors)
+            every = 'Both' if len(factors) == 2 else f'All {len(factors)}'
+            common = (f' {every} per-hectare figures of this activity are off by the '
+                      f'same factor {factor:.3g}: the amounts look computed with a yield of '
+                      f'{yield_kg_ha / factor:.6g} kg/ha, not the {yield_kg_ha:.6g} kg/ha the land '
+                      f'occupation gives -- check the yield and the occupation first.')
+        for name, unit, amount, comment, stated, actual, _t, what, basis in mismatches:
+            ratio = actual / stated
+            off = f'{ratio:.3g} times the stated figure' if ratio > 2 or ratio < 0.5 \
+                else f'{abs(ratio - 1):.0%} off'
+            report(prefix + name, f'{amount:g} {unit}: {basis} {actual:.4g}',
+                   f'{stated:.4g}, as the comment states ({what})',
+                   'amount contradicts its comment', 'BLOCKING',
+                   f'The comment says {what}, but the amount gives {actual:.4g} '
+                   f'({basis}{f" at a yield of {yield_kg_ha:.6g} kg/ha" if basis == "per ha" else ""}), '
+                   f'{off}.'
+                   + (common if common and basis == 'per ha' else _explain_ratio(ratio, comment))
+                   + ' Which of the two is wrong is not derivable, so neither is changed: '
+                     'correct the amount or the comment.', ROW_COMMENT_AMOUNTS)
+        _check_splits(rows, prefix, report)
+    if unchecked:
+        report('exchanges (comment figures)', ', '.join(sorted(unchecked)),
+               'a yield, to compare per-hectare figures with', 'comment figures not checked',
+               'INFO',
+               f'The comments of {len(unchecked)} exchange(s) state a per-hectare figure, but '
+               f'no plausible yield follows from the land occupation (there is none, or the '
+               f'one it gives is implausible), so they were not compared with '
+               f'the amounts: '
+               f'{", ".join(sorted(unchecked))}.', ROW_COMMENT_AMOUNTS)
+
+
+def _claims(name, unit, amount, comment, per_ha, product, operations):
+    """[(stated, actual, tolerance, what the comment says, basis)] for one
+    exchange; None when its comment states a per-hectare figure and there is
+    no yield to compare it with."""
+    claims = []
+
+    def per_hectare(stated, text, what):
+        if per_ha is None:
+            raise LookupError
+        claims.append((stated, per_ha(amount), _tolerance(text, comment), what, 'per ha'))
+
+    try:
+        match = _DIESEL_PASS_RE.search(comment)
+        if match and unit == 'kg':
+            # The diesel of one pass, times the passes of its field operation:
+            # no yield needed, the operation's amount is per kg already.
+            operation = re.sub(r'^diesel used in\s+', '', name, flags=re.I).lower()
+            passes = operations.get(operation)
+            if passes:
+                stated = _figure(match.group(1)) * passes
+                claims.append((stated, amount, _tolerance(match.group(1), comment),
+                               f'{match.group(1)} kg of diesel per hectare and pass, '
+                               f'times the {passes:g} ha/kg of "{operation}"', 'per kg'))
+            return claims
+
+        match = _PASSES_RE.search(comment)
+        if match and unit == 'ha':
+            per_hectare(_figure(match.group(1)), match.group(1),
+                        f'{match.group(1)} application(s)')
+            return claims
+
+        match = _TREES_RE.search(comment)
+        if match and unit == 'unit':
+            trees, years = _figure(match.group(1)), _figure(match.group(2))
+            per_hectare(trees / years, match.group(1),
+                        f'{match.group(1)} trees per ha over {match.group(2)} years')
+            return claims
+
+        match = _PLANTING_RE.search(comment)
+        if match and unit == 'unit':
+            trees, years = _figure(match.group(1)), _figure(match.group(2))
+            idle = match.group(3)
+            idle = _WORD_NUMBERS.get(idle.lower()) if idle and not idle.isdigit() else \
+                (int(idle) if idle else 0)
+            if per_ha is None:
+                raise LookupError
+            actual = per_ha(amount)
+            tolerance = _tolerance(match.group(1), comment)
+            # The FO sheet divides by the lifespan; most comments mean the
+            # productive years.  Either reading of the comment is consistent.
+            readings = [trees / years] + ([trees / (years - idle)] if idle and years > idle else [])
+            if all(abs(actual / r - 1) > tolerance for r in readings):
+                claims.append((readings[-1], actual, tolerance,
+                               f'{match.group(1)} trees per hectare over a lifespan of '
+                               f'{match.group(2)} years' + (f', {idle} of them unproductive'
+                                                            if idle else ''), 'per ha'))
+            return claims
+
+        match = _DIESEL_MJ_RE.search(comment)
+        lcv = _LCV_RE.search(comment)
+        if match and lcv and unit == 'MJ':
+            per_hectare(_figure(match.group(1)) * _figure(lcv.group(1)), match.group(1),
+                        f'{match.group(1)} kg of diesel per hectare at {lcv.group(1)} MJ/kg')
+            return claims
+
+        water, kwh = _WATER_RE.search(comment), _KWH_RE.search(comment)
+        if unit == 'm3' and water:
+            per_hectare(_figure(water.group(1)), water.group(1),
+                        f'{water.group(1)} m3 of water per hectare')
+            return claims
+        if unit == 'kWh' and kwh and water:
+            per_hectare(_figure(kwh.group(1)), kwh.group(1),
+                        f'{kwh.group(1)} kWh per hectare')
+            return claims
+    except LookupError:
+        return None
+
+    # The amount listed by its parts -- 'Abamectine (1,5E-07); Mineral Oil
+    # (8,9E-04)' -- in the exchange's own unit, so the parts sum to it.
+    if unit == 'kg' and not re.search(r'%|per (?:ha|hectare)|/ha\b', comment, re.I):
+        parts = [p for p in _PART_RE.findall(comment) if not _is_year(p)]
+        if parts:
+            stated = sum(_figure(p) for p in parts)
+            tolerance = max(_tolerance(p, comment) for p in parts)
+            claims.append((stated, amount, tolerance,
+                           ('parts summing to ' if len(parts) > 1 else '') + f'{stated:.4g} kg',
+                           'per kg'))
+    return claims
+
+
+def _check_splits(rows, prefix, report) -> None:
+    """'emissions of a.i. in air (9%), water (1%) and soil (90%)': each
+    compartment's row is that share of the substance's emissions."""
+    if 'compartment' not in rows.columns:
+        return
+    groups = {}
+    for _, row in rows.iterrows():
+        comment = _text(row.get('comment'))
+        match = _SPLIT_RE.search(comment)
+        # A row the model moved between compartments says so ('Includes ...
+        # moved from'), and its share no longer is the stated one.
+        if not match or 'moved from' in comment:
+            continue
+        key = (_text(row.get('name')), match.groups())
+        groups.setdefault(key, []).append(row)
+    for (name, shares), members in groups.items():
+        stated = dict(zip(('air', 'water', 'soil'), map(float, shares)))
+        amounts = {}
+        for row in members:
+            compartment = _text(row.get('compartment')).lower()
+            amounts[compartment] = amounts.get(compartment, 0.0) + (_number(row.get('amount')) or 0)
+        expected = {c for c, s in stated.items() if s > 0}
+        if set(amounts) != expected:
+            continue                    # a compartment absent: the shares cannot be read
+        total = sum(amounts.values())
+        if not total:
+            continue
+        actual = {c: 100 * a / total for c, a in amounts.items()}
+        off = [f'{c} {actual[c]:.1f}% (stated {stated[c]:g}%)' for c in sorted(actual)
+               if abs(actual[c] - stated[c]) > 1.0]
+        if off:
+            report(prefix + name, '; '.join(off),
+                   ', '.join(f'{c} {s:g}%' for c, s in stated.items()),
+                   'amount contradicts its comment', 'BLOCKING',
+                   f'The comment splits the emissions of {name} into air, water and soil '
+                   f'shares that the amounts do not follow. Which is wrong is not derivable, '
+                   f'so neither is changed: correct the amounts or the comment.',
+                   ROW_COMMENT_AMOUNTS)
 
 
 def _livestock(sheets, rows, dataset, activity, project, Finding, prefix, md_inter) -> list:

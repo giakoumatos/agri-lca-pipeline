@@ -162,18 +162,28 @@ def orphan_properties():
 
 
 @check
-def agricultural_air_emission_is_a_shared_decision():
+def agricultural_air_emission_always_goes_to_non_urban_air():
+    kind = 'agricultural air emission not in non-urban air'
     s = clean()
     s['exchanges'].loc[2, 'subcompartment'] = 'low population density, long-term'
-    hits = [f for f in run(s)[0] if f.kind == 'agricultural air emission not in non-urban air']
-    assert len(hits) == 1 and len(hits[0].options) == 2
-    assert s['exchanges'].loc[2, 'subcompartment'] == 'low population density, long-term'
-    # A remembered "move" is applied without asking; a remembered "keep" is left alone.
-    moved = run(s, lambda c, k, f: 'air / ' + K.AIR_AGRI_SUB)[0]
-    assert s['exchanges'].loc[2, 'subcompartment'] == K.AIR_AGRI_SUB and moved[0].fixed
+    findings, applied = run(s)
+    hits = [f for f in findings if f.kind == kind]
+    assert len(hits) == 1 and hits[0].fixed and not hits[0].options        # no decision asked
+    assert s['exchanges'].loc[2, 'subcompartment'] == K.AIR_AGRI_SUB and applied
+    # Already in non-urban air too: the amount joins that row, no duplicate.
+    s = clean()
+    s['exchanges'] = pd.concat([s['exchanges'], pd.DataFrame([exchange(
+        'ToEnvironment', 'Ammonia', 'kg', 0.002, 'air', 'low population density, long-term')])],
+        ignore_index=True)
+    run(s)
+    ammonia = s['exchanges'][s['exchanges']['name'] == 'Ammonia']
+    assert len(ammonia) == 1 and abs(ammonia['amount'].iloc[0] - 0.003) < 1e-12
+    # apply = no in Corrections keeps the dataset's placement.
+    s = clean()
     s['exchanges'].loc[2, 'subcompartment'] = 'low population density, long-term'
-    kept = run(s, lambda c, k, f: 'air / low population density, long-term')[0]
-    assert not [f for f in kept if 'air emission' in f.kind]
+    K.run(s, 'test.xlsx', ACT, 'tests', {}, M.Finding, M.EXCHANGE_PREFIX, M.placement_column,
+          rejected=lambda key: kind in key)
+    assert s['exchanges'].loc[2, 'subcompartment'] == 'low population density, long-term'
 
 
 @check
@@ -581,18 +591,258 @@ def edits_in_a_split_excel_are_told_apart():
             frame.to_excel(writer, sheet_name='exchanges', index=False)
 
     save(pd.DataFrame(rows))
-    os.makedirs(os.path.join(folder, S.AS_BUILT_DIRNAME))
-    shutil.copy2(part, S._as_built(part))
+    built = os.path.join(folder, 'built.xlsx')
+    shutil.copy2(part, built)
     edited = pd.DataFrame(rows)
     edited['comment'] = 'new'                                 # every row changed
     edited = edited.drop(index=1)                             # one deleted
     edited = pd.concat([edited, pd.DataFrame([{**rows[0], 'name': 'added'}])])
     save(edited.reset_index(drop=True))
-    edits = S.edits_in(part)
+    edits = S.edits_in(part, built)
     changed = [(b['name'], a['comment']) for _s, b, a in edits if b is not None and a is not None]
     assert sorted(changed) == [(f'input {i}', 'new') for i in (0, 2, 3, 4)]
     assert [b['name'] for _s, b, a in edits if a is None] == ['input 1']
     assert [a['name'] for _s, b, a in edits if b is None] == ['added']
+
+
+@check
+def a_split_excel_with_unsaved_changes_stops_the_recheck():
+    import tempfile
+    import split_edits as S
+    root = tempfile.mkdtemp()
+    part = os.path.join(root, 'part_1.xlsx')
+    pd.DataFrame([{'name': 'x'}]).to_excel(part, index=False)
+    saved_dir, saved_parts = os.environ.get('APPDATA'), S._parts
+    os.environ['APPDATA'] = root
+    S._parts = lambda project: [part]
+    try:
+        assert S.unsaved_in_excel('p') == []
+        excel = os.path.join(root, 'Microsoft', 'Excel', 'part_1312831781979098421')
+        os.makedirs(excel)
+        older = os.path.join(excel, 'part_1((Unsaved-1)).xlsb')
+        open(older, 'w').close()
+        os.utime(older, (os.path.getmtime(part) - 60,) * 2)       # saved since: fine
+        assert S.unsaved_in_excel('p') == []
+        os.utime(older, (os.path.getmtime(part) + 60,) * 2)       # newer than the part
+        assert len(S.unsaved_in_excel('p')) == 1
+        os.remove(older)
+        newer = os.path.join(excel, 'part_10((Unsaved-1)).xlsb')  # another part's
+        open(newer, 'w').close()
+        os.utime(newer, (os.path.getmtime(part) + 60,) * 2)
+        assert S.unsaved_in_excel('p') == []
+        os.remove(newer)
+        # A name with spaces: Excel keeps its copy under the name URL-encoded.
+        spaced = os.path.join(root, 'grass, AR - part 1.xlsx')
+        os.rename(part, spaced)
+        S._parts = lambda project: [spaced]
+        encoded = os.path.join(excel, 'grass,%20AR%20-%20part%201((Unsaved-2)).xlsb')
+        open(encoded, 'w').close()
+        os.utime(encoded, (os.path.getmtime(spaced) + 60,) * 2)
+        assert len(S.unsaved_in_excel('p')) == 1
+        os.remove(encoded)
+        open(os.path.join(root, '~$grass, AR - part 1.xlsx'), 'w').close()    # open in Excel
+        assert any('open in Excel' in p for p in S.unsaved_in_excel('p'))
+    finally:
+        S._parts = saved_parts
+        if saved_dir is None:
+            os.environ.pop('APPDATA')
+        else:
+            os.environ['APPDATA'] = saved_dir
+
+
+@check
+def the_message_to_the_provider_says_what_was_done_and_what_is_needed():
+    import provider_message as P
+
+    def action(kind, datasets, column, found='', expected='', note=''):
+        finding = M.Finding('x.xlsx', datasets[0], column, found, expected, kind, False,
+                            'BLOCKING', note, '', 'p')
+        return {'issue': kind, 'severity': 'Critical', 'datasets': datasets, 'finding': finding}
+
+    actions = [
+        action('includedActivitiesStart opening not standard', ['A', 'B'], 'includedActivitiesStart'),
+        action('includedActivitiesStart opening not standard', ['C'], 'includedActivitiesStart'),
+        action('price missing', ['C'], 'exchange:fescue grazing'),
+        action('nomenclature', ['A'], 'activityName'),                      # internal
+        action('something new', ['B'], 'exchange:urea', note='Urea is odd. More text.'),
+    ]
+    history = pd.DataFrame([
+        {'dataset': 'a.xlsx', 'field': 'exchange:hay', 'issue': 'price missing',
+         'after': "1 exchange row(s) renamed to '0.63'"},                   # misread answer
+        {'dataset': 'a.xlsx', 'field': 'split Excel', 'issue': 'edited in the split Excel',
+         'after': '[exchanges] added: alfalfa grazing [ReferenceProduct]: 1.0 kg; '
+                  '[properties] added: alfalfa grazing [ReferenceProduct], property'},
+        {'dataset': 'a.xlsx', 'field': 'properties', 'issue': 'Master Data properties applied',
+         'after': '9 propert(ies)'},
+    ])
+    products = {'a.xlsx': {'alfalfa grazing': {**{p: '1' for p in P.MANDATORY},
+                                               'price': '0.13 EUR2005'}}}
+    text = '\n'.join(P.lines('grass, AR', actions, history,
+                             {'a.xlsx': 'A', 'b.xlsx': 'B', 'c.xlsx': 'C'}, products))
+    assert text.count('Included activities start') == 1 and '(all three datasets)' in text, text
+    assert '"fescue grazing" price (C)' in text
+    assert 'cannot be checked' not in text and 'nomenclature' not in text
+    assert '"urea" (B): Urea is odd.' in text
+    assert "'0.63'" not in text and '"0.63"' not in text
+    assert 'The product is now named "alfalfa grazing".' in text
+    assert '"alfalfa grazing" now has its full set of properties and a price of 0.13 EUR2005.' in text
+    assert 'aligned with the ecoinvent Master Data' in text
+    done = P.lines('p', [], pd.DataFrame(columns=history.columns), {'a.xlsx': 'A'}, {})
+    assert any('Nothing further is needed' in line for line in done)
+
+
+@check
+def the_name_follows_the_inventory_and_the_text():
+    import meta_spec as spec
+
+    def name_of(name, comment, irrigation):
+        row = pd.Series({'activityName': name, 'geography': 'IT', 'generalComment': comment})
+        rows = [exchange('ReferenceProduct', name.split(',')[0].replace(' production', ''),
+                         'kg', 1.0)]
+        if irrigation:
+            rows.append(exchange('FromTechnosphere', 'irrigation', 'm3', 0.1))
+        return M.evidence_name(row, pd.DataFrame(rows))
+
+    # Missing axes: water regime from the inventory, system from the text.
+    name, reasons, _ = name_of('wheat grain production', 'Organic farms, organic methods.', False)
+    assert name == 'wheat grain production, organic, rainfed', name
+    # The name says irrigated, the inventory buys no irrigation: it follows the inventory,
+    # keeping the dry wording it would use; the text saying otherwise is noted.
+    name, _, notes = name_of('olive production, integrated, irrigated', 'Irrigated orchards.', False)
+    assert name == 'olive production, integrated, rainfed' and notes, (name, notes)
+    name, _, _ = name_of('olive production, integrated, non irrigated', '', True)
+    assert name == 'olive production, integrated, irrigated'
+    # One passing mention does not outvote the text: organic stays organic.
+    text = 'Organic soybean on organic farms; compared with conventional standards. Organic seed.'
+    name, _, _ = name_of('soybean production, organic, rainfed', text, False)
+    assert name == 'soybean production, organic, rainfed'
+    # "non‑irrigated" with a non-breaking hyphen is not read as "irrigated".
+    assert spec.axis_value_in_text('cultivated in non‑irrigated orchards', 'water_regime') \
+        == 'non-irrigated'
+    # Nothing to change: the same name, no reasons.
+    name, reasons, _ = name_of('olive production, integrated, non irrigated', 'Integrated.', False)
+    assert name == 'olive production, integrated, non irrigated' and not reasons
+
+
+@check
+def a_nonstandard_included_start_gets_the_standard_opening():
+    import meta_spec as spec
+    said = ('This activity assumes the production of alfalfa for five years. It begins with '
+            'soil cultivation and sowing after harvesting the previous crop. Seeds are included.')
+    assert spec.standard_included_start(said, 'This activity starts with X.') == (
+        'This activity starts with soil cultivation and sowing after harvesting the previous '
+        'crop. This activity assumes the production of alfalfa for five years. Seeds are included.')
+    # No sentence says where it starts: the opening built from the exchanges goes first.
+    plain = 'This activity represents a pasture. Seeds are included.'
+    built = 'This activity starts with the first field operation for the grass.'
+    fixed = spec.standard_included_start(plain, built)
+    assert fixed == f'{built} {plain}' and spec.included_start_status(fixed)[0] == 'ok'
+
+
+def with_comments(*rows, yield_kg_ha=10000.0):
+    """clean() plus exchanges carrying comments; run at the given yield."""
+    s = clean()
+    s['exchanges'] = pd.concat([s['exchanges'], pd.DataFrame(list(rows))], ignore_index=True)
+    applied = {}
+    findings = K.run(s, 'test.xlsx', ACT, 'tests', applied, M.Finding, M.EXCHANGE_PREFIX,
+                     M.placement_column, yield_of=lambda activity: yield_kg_ha)
+    return [f for f in findings if f.checklist_row == K.ROW_COMMENT_AMOUNTS]
+
+
+@check
+def passes_stated_in_the_comment():
+    # 2.5 passes at 10 t/ha are 0.00025 ha per kg.
+    said = 'Data based on Ribaudo (2017). The quantity corresponds to 2.5 applications.'
+    assert not with_comments(exchange('FromTechnosphere', 'mulching', 'ha', 0.00025, comment=said))
+    hits = with_comments(exchange('FromTechnosphere', 'mulching', 'ha', 0.0003, comment=said))
+    assert [f.kind for f in hits] == ['amount contradicts its comment'], hits
+
+
+@check
+def trees_stated_in_the_comment():
+    said = ('Data collected on field refers on  400 of trees per ha divided by the lifetime '
+            'years of the orchard (25 years).')
+    seedling = 'fruit tree seedling, for planting'
+    assert not with_comments(exchange('FromTechnosphere', seedling, 'unit', 0.0016, comment=said))
+    assert with_comments(exchange('FromTechnosphere', seedling, 'unit', 0.002, comment=said))
+
+
+@check
+def planting_over_the_lifespan_or_its_productive_years():
+    said = ('Data based on Ribaudo (2017). The quantity refers to the planting of 370 trees per '
+            'hectare (planting grid 6 x 4.5 m) and a lifespan of 50 years, with the first '
+            'three years unproductive. ')
+    seedling = 'fruit tree seedling, for planting'
+    for per_ha in (370 / 50, 370 / 47):                     # either reading is consistent
+        assert not with_comments(exchange('FromTechnosphere', seedling, 'unit',
+                                          per_ha / 10000, comment=said))
+    assert with_comments(exchange('FromTechnosphere', seedling, 'unit', 370 / 40 / 10000,
+                                  comment=said))
+
+
+@check
+def diesel_per_pass_against_its_field_operation():
+    said = ('This flow represents the amount of kg of diesel consumed by the specific field '
+            'operation. The diesel consumption of this field operation is 3 kg per hectare.')
+    operation = exchange('FromTechnosphere', 'fertilising, by broadcaster', 'ha', 0.0002)
+    right = exchange('FromTechnosphere', 'diesel used in fertilising, by broadcaster', 'kg',
+                     0.0006, comment=said)
+    wrong = dict(right, amount=0.0003)
+    assert not with_comments(operation, right, yield_kg_ha=None)   # no yield needed
+    assert with_comments(operation, wrong, yield_kg_ha=None)
+
+
+@check
+def irrigation_total_that_is_per_intervention():
+    said = ('Irrigation process. The quantity refers to water and energy consumption per 55 '
+            'micro-irrigation interventions, with a total use of approximately 30 m³ of water '
+            'and 15.9 kWh of electricity.')
+    assert not with_comments(exchange('FromTechnosphere', 'irrigation', 'm3', 0.003, comment=said))
+    hits = with_comments(exchange('FromTechnosphere', 'irrigation', 'm3', 0.165, comment=said))
+    assert hits and '55 is another number in the comment' in hits[0].note, hits
+
+
+@check
+def parts_listed_in_the_comment_sum_to_the_amount():
+    said = 'Data collected on field – Abamectine (1,5E-07); Mineral Oil (8,92E-04);'
+    pesticide = 'pesticide, unspecified'
+    assert not with_comments(exchange('FromTechnosphere', pesticide, 'kg', 0.00089215,
+                                      comment=said))
+    assert with_comments(exchange('FromTechnosphere', pesticide, 'kg', 0.00096, comment=said))
+    # A source year in brackets is no part.
+    assert not with_comments(exchange('FromTechnosphere', 'sulfur', 'kg', 0.0035,
+                                      comment='Data based on Ribaudo (2017), wettable'))
+
+
+@check
+def compartment_shares_stated_in_the_comment():
+    said = ('Data based on Zampori and Pant (2019) - emissions of active ingredient (a.i.) in '
+            'air (9%), water (1%) and soil (90%)')
+
+    def split(air, water, soil):
+        return [exchange('ToEnvironment', 'Pyriproxifen', 'kg', a, c, None, comment=said)
+                for a, c in ((air, 'air'), (water, 'water'), (soil, 'soil'))]
+
+    assert not with_comments(*split(0.09, 0.01, 0.9))
+    assert with_comments(*split(0.2, 0.01, 0.79))
+
+
+@check
+def one_factor_across_an_activity_points_at_the_yield():
+    said = 'The quantity corresponds to {} applications.'
+    hits = with_comments(
+        exchange('FromTechnosphere', 'mulching', 'ha', 0.000225, comment=said.format(2)),
+        exchange('FromTechnosphere', 'hoeing', 'ha', 0.0004500, comment=said.format(4)))
+    assert len(hits) == 2 and all('same factor' in f.note for f in hits), hits
+
+
+@check
+def per_hectare_figures_without_a_yield_are_reported_unchecked():
+    said = 'The quantity corresponds to 2 applications.'
+    hits = with_comments(exchange('FromTechnosphere', 'mulching', 'ha', 0.0002, comment=said),
+                         yield_kg_ha=None)
+    assert [(f.kind, f.severity) for f in hits] == [('comment figures not checked', 'INFO')]
+
 
 if __name__ == '__main__':
     failed = 0

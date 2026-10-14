@@ -495,6 +495,31 @@ def included_start_status(text) -> tuple:
     return 'nonstandard', None, opening
 
 
+# A sentence of the text that says where the activity starts, however it
+# opens: "It begins with soil cultivation ...", "The production system begins
+# with soil preparation ...".
+_START_SENTENCE = re.compile(r'\b(?:begins?|starts?)\s+(with|after|at)\b\s*(.*)$', re.IGNORECASE)
+
+
+def standard_included_start(text, built_opening: str) -> str:
+    """
+    A nonstandard includedActivitiesStart given the standard opening, keeping
+    every sentence of the provider's own.
+
+    The sentence that says where the activity starts is moved to the front in
+    the standard form ("It begins with soil cultivation ..." -> "This activity
+    starts with soil cultivation ..."); a text with none gets `built_opening`
+    (built from the exchanges) in front of it.
+    """
+    sentences = split_sentences(text)
+    for i, sentence in enumerate(sentences):
+        match = _START_SENTENCE.search(sentence)
+        if match and match.group(2).strip():
+            opening = f'{INCLUDED_START_PREFIX}{match.group(1).lower()} {match.group(2).strip()}'
+            return ' '.join([opening] + sentences[:i] + sentences[i + 1:])
+    return ' '.join([built_opening.strip()] + sentences)
+
+
 def apply_included_start(text) -> tuple:
     """Return (text_with_standard_opening, status, detail)."""
     status, canonical, detail = included_start_status(text)
@@ -999,16 +1024,44 @@ def axis_value_in_text(text, axis) -> str:
     conditions" says what the dataset is NOT, and reading 'organic' out of it
     puts the opposite word in the name.
     """
-    body = ' '.join(str(text or '').split()).lower()
-    if not body:
+    counts = axis_mentions(text, axis)
+    if not counts:
         return ''
+    # The value the text names most: one passing "conventional" in a text
+    # about organic farms does not make the dataset conventional.  A tie goes
+    # to the longest term, as the terms are listed.
+    return max(counts, key=lambda value: counts[value])
+
+
+# Hyphens that look like '-' but are not: "non‑irrigated" written with a
+# non-breaking hyphen was read as "irrigated".
+_HYPHENS = re.compile('[‐‑‒–—−]')
+
+
+def axis_mentions(text, axis) -> dict:
+    """{value: how often the text names it} for one axis, longest term first."""
+    body = _HYPHENS.sub('-', ' '.join(str(text or '').split()).lower())
+    counts = {}
     for term in sorted(AXIS_VOCABULARIES.get(axis, ()), key=len, reverse=True):
         if term.startswith('non'):
             pattern = r'\b' + re.escape(term) + r'\b'
         else:
             pattern = r'(?<!non-)(?<!non )\b' + re.escape(term) + r'\b'
-        if re.search(pattern, body):
-            return canonical_axis_value(term)
+        found = len(re.findall(pattern, body))
+        if found:
+            value = canonical_axis_value(term)
+            counts[value] = counts.get(value, 0) + found
+    return counts
+
+
+def dominant_axis_value(text, axis) -> str:
+    """The axis value the text clearly states -- the only one it names, or
+    named at least twice as often as any other -- or ''."""
+    counts = sorted(axis_mentions(text, axis).items(), key=lambda kv: -kv[1])
+    if not counts:
+        return ''
+    if len(counts) == 1 or counts[0][1] >= 2 * counts[1][1]:
+        return counts[0][0]
     return ''
 
 

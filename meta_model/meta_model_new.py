@@ -730,6 +730,88 @@ def mechanical_name_repairs(row) -> tuple:
     return segments, notes
 
 
+# ── The name the dataset's own evidence gives ───────────────────────────────
+# Set automatically, not asked: the inventory says whether the crop is
+# irrigated, and the dataset's own text which production system it follows.
+# The previous name is the starting point -- its product, its other axes, its
+# wording -- and only what the evidence settles is changed.
+
+AUTO_NAME_KIND = 'activity name set from the dataset'
+_DRY_WORDS = ('rainfed', 'non-irrigated', 'non irrigated')
+
+
+def _axis_index(segments, words) -> int | None:
+    """The position of the segment that is one of `words`, if any (not the base)."""
+    return next((i for i, s in enumerate(segments) if i and s.lower() in words), None)
+
+
+def evidence_name(row, exchanges=None, add_production: bool = True) -> tuple:
+    """
+    (name, reasons, notes): the activityName the evidence gives, why each
+    change was made, and what the evidence disagrees on (for a reviewer).
+
+      - the v2 'at farm', the word 'region' and the geography come out;
+      - "production" goes after the product (unless `add_production` is off);
+      - the water regime follows the inventory: irrigated when it has an
+        irrigation exchange, else rainfed (or the dry wording the name had);
+      - the production system is the one the text clearly states, put in or
+        corrected; a text that does not clearly state one leaves it alone;
+      - a woody perennial's training form, where the text names it.
+    """
+    current = spec.join_segments(spec.canonical_segments(row.get('activityName')))
+    segments, reasons = mechanical_name_repairs(row)
+    if not segments:
+        return current, [], []
+    notes = []
+    prose = dataset_prose(row)
+
+    joined = spec.join_segments(segments)
+    if add_production and spec.lacks_production_word(joined):
+        best = spec.production_name_options(
+            joined, reference_product_of(exchanges, row.get('activityName')))[0][1]
+        if best != joined:
+            segments = spec.canonical_segments(best)
+            reasons.append('"production" put after the product')
+
+    # Water regime: the inventory decides.
+    irrigated = has_irrigation_exchange(row, exchanges)
+    index = _axis_index(segments, ('irrigated',) + _DRY_WORDS)
+    word = segments[index] if index is not None else None
+    want = 'irrigated' if irrigated else (word if word and word.lower() in _DRY_WORDS
+                                          else 'rainfed')
+    evidence = ('the inventory has an irrigation exchange' if irrigated
+                else 'the inventory has no irrigation exchange')
+    if word is None:
+        segments = spec.insert_axis_value(segments, 'water_regime', want)
+        reasons.append(f'water regime "{want}" added: {evidence}')
+    elif (word.lower() == 'irrigated') != irrigated:
+        segments[index] = want
+        reasons.append(f'"{word}" changed to "{want}": {evidence}')
+    stated = spec.dominant_axis_value(prose, 'water_regime')
+    if stated and (stated == 'irrigated') != irrigated:
+        notes.append(f'the text says "{stated}", but {evidence} -- the name follows the '
+                     f'inventory; check the text or the inventory')
+
+    # Production system: the text decides, where it is clear.
+    systems = spec.AXIS_VOCABULARIES['production_system']
+    index = _axis_index(segments, systems)
+    stated = spec.dominant_axis_value(prose, 'production_system')
+    if stated and index is None:
+        segments = spec.insert_axis_value(segments, 'production_system', stated)
+        reasons.append(f'production system "{stated}" added: the dataset text states it')
+    elif stated and index is not None and segments[index].lower() != stated:
+        reasons.append(f'"{segments[index]}" changed to "{stated}": the dataset text states '
+                       f'"{stated}"')
+        segments[index] = stated
+
+    training = stated_training_form(row)
+    if training and _axis_index(segments, spec.AXIS_VOCABULARIES['training_system']) is None:
+        segments = spec.insert_axis_value(segments, 'training_system', training)
+        reasons.append(f'training form "{training}" added: the dataset text names it')
+
+    return spec.join_segments(segments), reasons, notes
+
+
 def name_options(row, exchanges=None) -> list:
     """
     Candidate corrected activityNames, best guess first: [(label, name)].
@@ -1333,11 +1415,12 @@ def process_meta_row(row: pd.Series, dataset: str, apply_fixes: bool,
     # included.  Not a remembered-decision note(): a rename has to reach every
     # sheet, so a reused answer goes out through renamed_to like the above.
     name_now = str(row.get('activityName', '') or '')
+    add_production = True
     if spec.lacks_production_word(name_now):
         cached = decisions.get(decision_signature('activityName', PRODUCTION_NAME_KIND,
                                                   name_now) or '')
         if cached and spec.same_activity_name(cached['value'], name_now):
-            pass                                     # answered: not a production
+            add_production = False                   # answered: not a production
         elif cached and apply_fixes:
             new = spec.join_segments(spec.canonical_segments(cached['value']))
             findings.append(Finding(
@@ -1347,15 +1430,29 @@ def process_meta_row(row: pd.Series, dataset: str, apply_fixes: bool,
                 f'from config/review/{DECISIONS_FILENAME} to ask again.', '', project, new))
             row['activityName'] = new
             renamed_to = new
-        else:
-            options = spec.production_name_options(
-                name_now, reference_product_of(exchanges, name_now))
-            note('activityName', name_now, options[0][1], PRODUCTION_NAME_KIND, False,
-                 'BLOCKING',
-                 'A productive activity is named "<product> production, <axes>", e.g. '
-                 '"grass production" or "wheat grain production, spring, conventional, '
-                 'hill region". Pick where the word goes, or keep the name if this is '
-                 'not a production activity.', '', options[0][1], options)
+            name_now = new
+
+    # The name the dataset's evidence gives -- "production" after the product,
+    # the water regime from the inventory, the production system from the
+    # text -- set automatically.  apply = no in Corrections keeps the name.
+    built, reasons, disagreements = evidence_name(row, exchanges, add_production)
+    activity_part = ACTIVITY_SEP + original if str(original or '').strip() else ''
+    rejected_name = _fix_rejected(f'{project}||{dataset}{activity_part}|activityName|'
+                                  f'{AUTO_NAME_KIND}')
+    if built and built != spec.join_segments(spec.canonical_segments(name_now)) \
+            and not rejected_name:
+        note('activityName', name_now, built, AUTO_NAME_KIND, apply_fixes,
+             'WARNING' if apply_fixes else 'BLOCKING',
+             'Set from the dataset: ' + '; '.join(reasons) + '.'
+             + (' Note: ' + '; '.join(disagreements) + '.' if disagreements else '')
+             + ' Set apply = no in Corrections to keep the previous name.',
+             '', built)
+        if apply_fixes:
+            row['activityName'] = built
+            renamed_to = built
+    elif disagreements:
+        note('activityName', name_now, name_now, 'name and dataset text disagree', False,
+             'INFO', '; '.join(disagreements) + '.')
 
     family, _axes = parse_activity_name(original)
 
@@ -1659,7 +1756,9 @@ def process_meta_row(row: pd.Series, dataset: str, apply_fixes: bool,
                      '28-59 (Checks)')
 
         # The standard opening of includedActivitiesStart.  "begins with" is
-        # rewritten to "starts with"; any other opening is a rewording job.
+        # rewritten to "starts with"; any other opening gets the standard one
+        # -- the provider's own "begins with ..." sentence moved to the front,
+        # or one built from the exchanges -- with every other sentence kept.
         if column == spec.INCLUDED_START_COLUMN:
             start_status, _canon, opening = spec.included_start_status(tidy_text(found))
             if start_status == 'reformat':
@@ -1670,13 +1769,21 @@ def process_meta_row(row: pd.Series, dataset: str, apply_fixes: bool,
                      '"... starts after ..."), naming what prepares this cultivation.',
                      '28-59 (Checks)')
             elif start_status == 'nonstandard':
-                note(column, opening, spec.INCLUDED_START_PREFIX + '...',
-                     'includedActivitiesStart opening not standard', False, 'BLOCKING',
+                built = build_included_start(row, exchanges, name_facts(row, families))
+                standard = spec.standard_included_start(
+                    canonical_text, spec.split_sentences(built)[0] if built else '')
+                note(column, canonical_text, standard,
+                     'includedActivitiesStart opening not standard', apply_fixes,
+                     'WARNING' if apply_fixes else 'BLOCKING',
                      'Must open "This activity starts with ..." or "... starts after ...". '
-                     'Rewording is left to a human. Worked example: '
-                     + spec.INCLUDED_START_EXAMPLE,
-                     '28-59 (Checks)',
-                     house_wording(column, families, family))
+                     'The sentence saying where the activity starts is moved to the front in '
+                     'that form (or, with none, one built from the exchanges is put first); '
+                     'every other sentence is kept. Set apply = no in Corrections to keep '
+                     'the original.',
+                     '28-59 (Checks)', standard)
+                if apply_fixes:
+                    _set_cell_value(row, column, standard)
+                    canonical_text = standard
 
         if not templates:
             continue
@@ -4362,7 +4469,8 @@ def process_dataset(path: str, apply_fixes: bool, answers: dict | None = None,
         placement_column,
         lambda column, kind, found: (decisions.get(
             decision_signature(column, kind, found) or '') or {}).get('value'),
-        _fix_rejected))
+        _fix_rejected,
+        lambda activity: derive_yield({'activityName': activity}, sheets.get('exchanges'))))
 
     # The metadata after the exchanges: what it says depends on them -- a
     # pesticide still under its SimaPro name ('Atrazine {RoW}| ...') is not
@@ -4417,9 +4525,10 @@ def write_dataset(path: str, sheets: dict, applied: dict | None = None) -> None:
 # pipeline itself does, and a derived file edited in place would drift from
 # its source.
 
-def rebuild_splits(project: str) -> tuple:
+def rebuild_splits(project: str, into: str | None = None) -> tuple:
     """
-    Rewrite the per-chunk split Excels for a whole project.
+    Rewrite the per-chunk split Excels for a whole project -- into the
+    project's crop_datasets_new/, or the folder `into`.
 
     The splits combine every dataset of the project, so they are rebuilt from
     all of them, not only the ones just corrected.
@@ -4441,9 +4550,9 @@ def rebuild_splits(project: str) -> tuple:
 
     sheets = {name: pd.concat(frames, ignore_index=True)
               for name, frames in combined.items() if frames}
-    split_dir = os.path.join(project_dir_of(project), 'crop_datasets_new')
+    split_dir = into or os.path.join(project_dir_of(project), 'crop_datasets_new')
     try:
-        diesel.split_crop_datasets(sheets['exchanges'], sheets, split_dir)
+        diesel.split_crop_datasets(sheets['exchanges'], sheets, split_dir, project)
     except Exception as exc:
         return 0, [f'{exc.__class__.__name__}: {exc}']
     return len(glob.glob(os.path.join(split_dir, '*.xlsx'))), []

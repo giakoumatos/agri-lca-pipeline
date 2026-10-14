@@ -5,6 +5,8 @@ fo_name,crop_geography,fo_db_geography
 "application of plant protection product, by field sprayer",TN,GLO
 combine harvesting,CA,GLO
 combine harvesting,IT,GLO
+"combine harvesting, soybean",BR-PR,GLO
+"combine harvesting, soybean",CD,GLO
 "fertilising, by broadcaster",AR,GLO
 "fertilising, by broadcaster",CA,GLO
 "fertilising, by broadcaster",IT,GLO
@@ -14,16 +16,22 @@ hoeing,IT,GLO
 "mowing, by rotary mower",AR,GLO
 mulching,IT,GLO
 mulching,TN,GLO
+planting,BR-PR,GLO
+planting,CD,GLO
 "planting with starter fertiliser, by no till planter",AR,GLO
 sowing,CA,GLO
 sowing,IT,GLO
 "tillage, currying, by weeder",IT,GLO
+"tillage, disking",BR-PR,median
+"tillage, disking",CD,median
 "tillage, harrowing, by offset disc harrow",IT,GLO
 "tillage, harrowing, by offset disc harrow",TN,GLO
 "tillage, harrowing, by rotary harrow",IT,GLO
 "tillage, harrowing, by rotary harrow",TN,GLO
 "tillage, harrowing, by spring tine harrow",IT,GLO
 "tillage, harrowing, by tandem disk",IT,median
+"tillage, ploughing",BR-PR,GLO
+"tillage, ploughing",CD,GLO
 "tillage, ploughing",IT,GLO
 "tillage, rolling",CA,GLO
 "tillage, rolling",IT,GLO

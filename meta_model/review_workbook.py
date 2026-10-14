@@ -16,8 +16,10 @@ The layout is the livestock-ecoinvent-check skill's report; the verdict and
 checklist sheets are drawn by consolidate_reviews.py (copied unchanged from
 the checkdataset skill) from a results.json-shaped dict per dataset:
 
-  Verdict              per-dataset status, common to all, must fix, decisions,
-                       resolved -- the written verdict, as the first sheet
+  Verdict              on top, the message to the data provider -- what was
+                       corrected, what is still needed (provider_message.py);
+                       then per-dataset status, common to all, must fix,
+                       decisions, resolved -- the written verdict, as the first sheet
   Activities overview  each dataset by name, with counts per severity and a verdict
   Action_list          #, Severity, Area, Issue, Detail -- one row per distinct
                        error, with its datasets, in severity order; and the
@@ -944,7 +946,7 @@ def write_review(project: str, findings: list, corrections: list = (),
                 '#': str(number) if len(lines) == 1 else f'{number}-{line}',
                 'severity': group['severity'], 'area': area_of(sample),
                 'issue': group['kind'], 'item': item, 'detail': '\n'.join(detail),
-                'datasets': _compact(own), 'n': len(own),
+                'datasets': _compact(own), 'n': len(own), 'names': own, 'finding': sample,
                 'rows': list(dict.fromkeys(cell for f in members for cell in finding_rows(f))),
                 'inputs': [sample.proposal, model.render_choices(sample),
                            next((typed[k] for k in keys if k in typed), ''),
@@ -1117,6 +1119,29 @@ def write_review(project: str, findings: list, corrections: list = (),
                f'sheet.' if deleted_count else 'Deleted: nothing was removed from these datasets.'])
     ws.cell(ws.max_row, 1).font = BOLD
     ws.cell(ws.max_row, 1).alignment = WRAP
+
+    # The message to the data provider, on top of the verdict: what was
+    # corrected and what is still needed, ready to copy into an email.
+    import provider_message
+    message = provider_message.lines(
+        project,
+        [{'issue': a['issue'], 'severity': a['severity'], 'datasets': a['names'],
+          'finding': a['finding']} for a in actions],
+        history, labels,
+        {d: provider_message.own_products(_read_dataset(project, d)) for d in datasets})
+    # One cell, so it is copied in one go.
+    ws = wb['Verdict']
+    ws.insert_rows(1, amount=4)
+    ws.cell(1, 1, '# Message to the data provider -- copy the cell below into an email '
+                  '(rebuilt on every run)').font = BOLD
+    cell = ws.cell(2, 1, '\n'.join(message))
+    cell.alignment = WRAP
+    # Tall enough to read it whole: its lines as wrapped at the column's width
+    # (Excel allows a row at most 409 points).
+    width = int(ws.column_dimensions['A'].width or 100)
+    shown = sum(max(1, -(-len(line) // width)) for line in message)
+    ws.row_dimensions[2].height = min(409, 15 * shown)
+    ws.cell(3, 1, '─' * 60)
 
     # The skill's look: its sheet order, white-on-blue headers.
     for index, name in enumerate(n for n in SHEET_ORDER if n in wb.sheetnames):

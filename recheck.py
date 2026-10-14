@@ -49,8 +49,18 @@ def main() -> int:
 def run(project: str, files: list) -> int:
     """Re-check the chosen datasets -- also run_pipeline.py's Re-check button."""
     # Edits made in the split Excels first: they are corrections of the
-    # datasets like any other, checked with them below.
+    # datasets like any other, checked with them below.  Only saved edits can
+    # be read, and the parts are rebuilt at the end -- so a part still open,
+    # or edited and closed unsaved, stops the re-check before anything is lost.
     import split_edits
+    unsaved = split_edits.unsaved_in_excel(project)
+    if unsaved and '--ignore-unsaved' not in sys.argv:
+        print()
+        print('  Re-check stopped: edits in the split Excels are not saved to them yet.')
+        for line in unsaved:
+            print(f'    - {line}')
+        print('  (recheck.py --ignore-unsaved re-checks anyway; the unsaved edits are then lost.)')
+        return 1
     split_edits.apply(project)
     from config_new_datasets import stale_calculations
     stale = stale_calculations(project, files)
